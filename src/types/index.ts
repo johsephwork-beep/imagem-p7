@@ -11,6 +11,13 @@ export interface Topic {
   driveFileId?: string;
 }
 
+export interface QuestionImage {
+  type: 'drive' | 'url';
+  src: string;
+  caption?: string;
+  showAfterAnswer?: boolean;
+}
+
 export interface Question {
   id: string;
   topicId: string;
@@ -22,6 +29,7 @@ export interface Question {
   correctAnswer: AnswerOption;
   explanation?: string;
   imageUrl?: string;
+  image?: QuestionImage;
   difficulty: Difficulty;
   tags: string[];
   source?: string;

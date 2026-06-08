@@ -74,6 +74,12 @@ export const QUESTIONS: Question[] = [
     tags: ['TC', 'TCE', 'hematoma epidural', 'HED'],
     source: 'Monitoria UNIMA 2026',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Epidural_hematoma_arrow.png/640px-Epidural_hematoma_arrow.png',
+    image: {
+      type: 'drive',
+      src: '155MQby7jWZ7xqkA9n0xvcfnhKAzf01Sb',
+      caption: 'TC crânio s/ contraste — hematoma epidural biconvexo hiperdensidade',
+      showAfterAnswer: false,
+    },
     explanation:
       'O HED é causado geralmente por ruptura da artéria meníngea média, localizando-se entre a dura-máter e o crânio. Por estar delimitado pelas suturas cranianas (onde a dura adere ao osso), forma uma coleção biconvexa (lenticular) hiperdensa na TC sem contraste. O hematoma subdural, ao contrário, cruza as suturas e tem formato em crescente.',
   },
@@ -93,6 +99,12 @@ export const QUESTIONS: Question[] = [
     tags: ['TC', 'TCE', 'hematoma subdural crônico', 'densidade'],
     source: 'Monitoria UNIMA 2026',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Ct-scan_of_the_brain_with_an_subdural_hematoma.jpg/640px-Ct-scan_of_the_brain_with_an_subdural_hematoma.jpg',
+    image: {
+      type: 'drive',
+      src: '155MQby7jWZ7xqkA9n0xvcfnhKAzf01Sb',
+      caption: 'TC crânio — hematoma subdural agudo (morfologia em crescente)',
+      showAfterAnswer: false,
+    },
     explanation:
       'O hematoma subdural evolui em fases: agudo (< 3 dias) = hiperdensa; subagudo (3 dias–3 semanas) = isodensa; crônico (> 3 semanas) = hipodensa (densidade próxima ao LCR). A degradação da hemoglobina ao longo do tempo explica essa variação. O quadro clínico com latência de semanas, especialmente em idosos, é clássico do hematoma subdural crônico.',
   },
@@ -207,6 +219,12 @@ export const QUESTIONS: Question[] = [
     tags: ['TC', 'AVE', 'ACM', 'sinal hiperdensa', 'isquêmico'],
     source: 'Monitoria UNIMA 2026',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/SAH.png/640px-SAH.png',
+    image: {
+      type: 'drive',
+      src: '1KLsdBwEAO_Mn6ewTyV7xAEktXzME-Ysa',
+      caption: 'TC s/ contraste — sinal da ACM hiperdensa (trombo agudo intraluminal)',
+      showAfterAnswer: false,
+    },
     explanation:
       'O sinal da ACM hiperdensa corresponde à visualização de coágulo (trombo) intraluminal na artéria cerebral média na TC sem contraste, aparecendo como hiperdensidade espontânea no trajeto da ACM. Tem sensibilidade de ~35–40% mas especificidade ~90%. É um sinal de fase hiperaguda, identificável antes mesmo das alterações isquêmicas parenquimatosas. Orienta para indicação de trombólise/trombectomia imediata.',
   },
@@ -225,6 +243,12 @@ export const QUESTIONS: Question[] = [
     difficulty: 'medio',
     tags: ['TC', 'AVE', 'ASPECTS', 'trombectomia'],
     source: 'Monitoria UNIMA 2026',
+    image: {
+      type: 'drive',
+      src: '1S2Rha4MbX9UC0ns9Do2Hb1H70RUyGAyJ',
+      caption: 'TC — mapa ASPECTS: 10 regiões do território da ACM',
+      showAfterAnswer: false,
+    },
     explanation:
       'O ASPECTS avalia 10 regiões do território da ACM: 7 no corte ganglio-capsular (M1–M3, núcleo caudado, lentiforme, cápsula interna, ínsula) e 3 no corte supragangliônico (M4–M6). Cada região com hipodensidade precoce perde 1 ponto, iniciando em 10 (normal). ASPECTS ≥ 6 indica tecido potencialmente salvável e é o corte clássico para trombectomia, embora trials recentes (RESCUE-Japan, SELECT2) tenham incluído pacientes com ASPECTS 3–5.',
   },
@@ -243,6 +267,12 @@ export const QUESTIONS: Question[] = [
     difficulty: 'dificil',
     tags: ['RM', 'AVE', 'DWI', 'FLAIR', 'mismatch', 'janela terapêutica'],
     source: 'Monitoria UNIMA 2026',
+    image: {
+      type: 'drive',
+      src: '1S2Rha4MbX9UC0ns9Do2Hb1H70RUyGAyJ',
+      caption: 'RM — DWI com hipersinal, FLAIR negativo → AVCi dentro da janela terapêutica',
+      showAfterAnswer: false,
+    },
     explanation:
       'O sinal DWI positiviza em minutos na isquemia (restrição à difusão pelo edema citotóxico). O FLAIR leva ~4–6 horas para positivizar. Portanto, DWI+/FLAIR- indica lesão isquêmica recente, com alta probabilidade de estar dentro da janela de 4,5 horas para trombólise. Esse conceito é fundamental para o "wake-up stroke" (AVE ao acordar com hora de início desconhecida), validado pelo estudo WAKE-UP.',
   },
@@ -410,6 +440,12 @@ export const QUESTIONS: Question[] = [
     difficulty: 'medio',
     tags: ['RM', 'HIC', 'sela turca vazia', 'hipófise'],
     source: 'Monitoria UNIMA 2026',
+    image: {
+      type: 'drive',
+      src: '18gtrknfggsayUMs5LC8Lgupgrt_bXYOG',
+      caption: 'RM T1 sagital — sela turca vazia na Hipertensão Intracraniana idiopática',
+      showAfterAnswer: false,
+    },
     explanation:
       'A sela turca vazia resulta da herniação do espaço subaracnóideo para dentro da sela, fazendo com que o LCR comprime a hipófise contra a parede posterior/inferior. Na HIC crônica, a pressão elevada do LCR causa remodelamento ósseo da sela e compressão hipofisária. É um achado inespecífico isolado, mas altamente sugestivo de HIC quando associado a: achatamento posterior do globo ocular, distensão da bainha perioptica e tortuosidade do nervo óptico na RM.',
   },
@@ -428,6 +464,12 @@ export const QUESTIONS: Question[] = [
     difficulty: 'medio',
     tags: ['RM', 'HIC', 'nervo óptico', 'bainha', 'globo ocular'],
     source: 'Monitoria UNIMA 2026',
+    image: {
+      type: 'drive',
+      src: '18gtrknfggsayUMs5LC8Lgupgrt_bXYOG',
+      caption: 'RM T2 axial — distensão do complexo bainha-nervo óptico na HIC',
+      showAfterAnswer: true,
+    },
     explanation:
       'Na HIC, a pressão elevada do LCR propaga-se pelo espaço subaracnóideo ao redor do nervo óptico (bainha perineural). Na RM T2, isso aparece como dilatação da bainha do nervo óptico (> 5 mm a 3 mm atrás do globo) e achatamento da esclera posterior (globo oval em vez de esférico). A tortuosidade do nervo óptico completa a tríade orbitária de HIC.',
   },
@@ -577,6 +619,12 @@ export const QUESTIONS: Question[] = [
     difficulty: 'dificil',
     tags: ['RM', 'Parkinson', 'swallow tail', 'nigrossomo', 'SWI'],
     source: 'Monitoria UNIMA 2026',
+    image: {
+      type: 'drive',
+      src: '1jxItWMQuJA8DjlyuxR1wlGYebiXVBErL',
+      caption: 'RM SWI — nigrossoma-1: sinal da cauda de andorinha (ausente na DP)',
+      showAfterAnswer: false,
+    },
     explanation:
       'O nigrossomo-1 é uma sub-região da substância negra pars compacta (SNpc) rica em neurônios dopaminérgicos. Em indivíduos saudáveis, nas sequências SWI (susceptibilidade) ou neuromelanina-RM, aparece como uma área de hiperssinal lateral na SNpc — bilateralmente, formam as "caudas de andorinha" (swallow tail). Na DP, há perda seletiva desses neurônios, desaparecendo o hiperssinal = perda do sinal da swallow tail. É um biomarcador de imagem de alta especificidade para DP.',
   },
@@ -780,6 +828,12 @@ export const QUESTIONS: Question[] = [
     tags: ['EM', 'RM', 'Dawson fingers', 'FLAIR', 'periventricular'],
     source: 'QUIZ CVCC / Monitoria UNIMA 2026',
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/MULTIPLE_SCLEROSIS.JPG/640px-MULTIPLE_SCLEROSIS.JPG',
+    image: {
+      type: 'drive',
+      src: '1g7tRH534321Gpi_-6acHmqbmORvCL2Jn',
+      caption: 'RM FLAIR — dedos de Dawson: lesões desmielinizantes periventriculares (EM)',
+      showAfterAnswer: false,
+    },
     explanation:
       'Os "dedos de Dawson" (Dawson fingers) são lesões desmielinizantes ovóides que se dispõem perpendicularmente ao eixo longitudinal dos ventrículos laterais, acompanhando o trajeto das veias medulares (venulas pericentriculares). São mais bem visualizados na RM FLAIR sagital, onde aparecem como "dedos" apontando do ventrículo em direção ao córtex. Esse padrão é altamente sugestivo de EM e reflete a inflamação perivenular característica da doença.',
   },

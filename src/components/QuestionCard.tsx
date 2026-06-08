@@ -4,6 +4,7 @@ import { CheckCircle2, XCircle, ChevronDown, ZoomIn } from 'lucide-react';
 import type { Question, AnswerOption } from '../types';
 import { DifficultyBadge } from './DifficultyBadge';
 import { TopicBadge } from './TopicBadge';
+import { QuestionImage } from './QuestionImage';
 
 type CardState = 'idle' | 'selected' | 'revealed';
 
@@ -92,7 +93,16 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         )}
       </div>
 
-      {/* Imagem do exame */}
+      {/* Imagem da questão (campo image novo) — exibida junto ao enunciado */}
+      {question.image && !question.image.showAfterAnswer && (
+        <QuestionImage
+          type={question.image.type}
+          src={question.image.src}
+          caption={question.image.caption}
+        />
+      )}
+
+      {/* Imagem legada imageUrl — compatibilidade com questões antigas */}
       {question.imageUrl && !imgError && (
         <motion.div
           initial={{ opacity: 0, y: 8 }}
@@ -206,6 +216,20 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
             )}
           </AnimatePresence>
         </motion.div>
+      )}
+
+      {/* Imagem revelada após resposta */}
+      {question.image?.showAfterAnswer && state === 'revealed' && (
+        <div className="mt-4">
+          <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
+            Imagem de referência
+          </p>
+          <QuestionImage
+            type={question.image.type}
+            src={question.image.src}
+            caption={question.image.caption}
+          />
+        </div>
       )}
 
       {/* Tags */}
