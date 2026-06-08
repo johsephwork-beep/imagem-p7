@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { ElementType } from 'react';
 import { motion } from 'framer-motion';
 import {
   Brain, Activity, Zap, Circle, Layers,
@@ -10,7 +11,7 @@ import { DRIVE_FILES, getDrivePreviewUrl } from '../services/driveImages';
 import { DifficultyBadge } from '../components/DifficultyBadge';
 import type { Difficulty } from '../types';
 
-const ICON_MAP: Record<string, React.ElementType> = {
+const ICON_MAP: Record<string, ElementType> = {
   Brain, Activity, Zap, Circle, Layers,
 };
 

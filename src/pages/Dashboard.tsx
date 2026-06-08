@@ -1,3 +1,4 @@
+import type { ElementType } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -8,7 +9,7 @@ import { TOPICS } from '../data/topics';
 import { useAppStore } from '../store';
 import { StatCard } from '../components/StatCard';
 
-const ICON_MAP: Record<string, React.ElementType> = {
+const ICON_MAP: Record<string, ElementType> = {
   Brain, Activity, Zap, Circle, Layers,
 };
 

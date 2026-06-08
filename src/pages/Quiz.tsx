@@ -12,7 +12,6 @@ export function Quiz() {
   const { topicId } = useParams<{ topicId: string }>();
   const navigate = useNavigate();
   const {
-    currentSession,
     sessionQuestionIds,
     startSession,
     answerQuestion,
