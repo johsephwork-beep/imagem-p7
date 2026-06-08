@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import { Brain, LayoutDashboard, BookOpen, BarChart2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const NAV_LINKS = [
   { to: '/',           label: 'Dashboard', icon: LayoutDashboard },

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
-  LineChart, Line, CartesianGrid,
+  LineChart, Line, CartesianGrid, Cell,
 } from 'recharts';
 import { CheckCircle2, Target, Flame, Trophy, AlertTriangle } from 'lucide-react';
 import { useAppStore } from '../store';
@@ -75,7 +75,7 @@ export function Desempenho() {
               />
               <Bar dataKey="acerto" radius={[4, 4, 0, 0]}>
                 {topicData.map((entry, i) => (
-                  <rect key={i} fill={barColor(entry.acerto)} />
+                  <Cell key={i} fill={barColor(entry.acerto)} />
                 ))}
               </Bar>
             </BarChart>

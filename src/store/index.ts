@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import type { QuizSession, SessionAnswer } from '../types';
 import { QUESTIONS } from '../data/questions';
 import { TOPICS } from '../data/topics';
-import { calcAccuracy, calcStreak, getWeakTags, getBestTopic, getSessionHistory } from '../utils/stats';
+import { calcStreak, getWeakTags, getBestTopic, getSessionHistory } from '../utils/stats';
 import type { TopicStats, OverallStats, TagStat, SessionSummary } from '../types';
 
 function generateId(): string {

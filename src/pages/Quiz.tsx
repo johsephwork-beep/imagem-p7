@@ -17,7 +17,6 @@ export function Quiz() {
     startSession,
     answerQuestion,
     finishSession,
-    clearCurrentSession,
   } = useAppStore();
 
   const [started, setStarted] = useState(false);
