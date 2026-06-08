@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronDown, ZoomIn } from 'lucide-react';
 import type { Question, AnswerOption } from '../types';
 import { DifficultyBadge } from './DifficultyBadge';
 import { TopicBadge } from './TopicBadge';
@@ -18,6 +18,8 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
   const [selected, setSelected] = useState<AnswerOption | null>(null);
   const [state, setState] = useState<CardState>('idle');
   const [showExplanation, setShowExplanation] = useState(false);
+  const [imgZoomed, setImgZoomed] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   function handleSelect(id: AnswerOption) {
     if (state !== 'idle') return;
@@ -89,6 +91,53 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
           <p className="text-brand-muted text-xs mt-3 font-mono">Fonte: {question.source}</p>
         )}
       </div>
+
+      {/* Imagem do exame */}
+      {question.imageUrl && !imgError && (
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative rounded-xl overflow-hidden border border-brand-border bg-black group cursor-zoom-in"
+          style={{ borderColor: 'rgba(99,102,241,0.25)' }}
+          onClick={() => setImgZoomed(true)}
+        >
+          <img
+            src={question.imageUrl}
+            alt="Exame de imagem radiológico"
+            className="w-full object-contain max-h-72"
+            onError={() => setImgError(true)}
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow-lg" />
+          </div>
+          <p className="text-brand-muted text-xs text-center py-1.5 bg-brand-surface/80">
+            Clique para ampliar · Fonte: Wikimedia Commons (CC)
+          </p>
+        </motion.div>
+      )}
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {imgZoomed && question.imageUrl && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-zoom-out"
+            onClick={() => setImgZoomed(false)}
+          >
+            <motion.img
+              src={question.imageUrl}
+              alt="Exame de imagem ampliado"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              initial={{ scale: 0.85 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.85 }}
+              transition={{ duration: 0.2 }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Options */}
       <div className="space-y-2">

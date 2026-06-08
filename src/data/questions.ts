@@ -73,6 +73,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'facil',
     tags: ['TC', 'TCE', 'hematoma epidural', 'HED'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Epidural_hematoma_arrow.png/640px-Epidural_hematoma_arrow.png',
     explanation:
       'O HED é causado geralmente por ruptura da artéria meníngea média, localizando-se entre a dura-máter e o crânio. Por estar delimitado pelas suturas cranianas (onde a dura adere ao osso), forma uma coleção biconvexa (lenticular) hiperdensa na TC sem contraste. O hematoma subdural, ao contrário, cruza as suturas e tem formato em crescente.',
   },
@@ -91,6 +92,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'facil',
     tags: ['TC', 'TCE', 'hematoma subdural crônico', 'densidade'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Ct-scan_of_the_brain_with_an_subdural_hematoma.jpg/640px-Ct-scan_of_the_brain_with_an_subdural_hematoma.jpg',
     explanation:
       'O hematoma subdural evolui em fases: agudo (< 3 dias) = hiperdensa; subagudo (3 dias–3 semanas) = isodensa; crônico (> 3 semanas) = hipodensa (densidade próxima ao LCR). A degradação da hemoglobina ao longo do tempo explica essa variação. O quadro clínico com latência de semanas, especialmente em idosos, é clássico do hematoma subdural crônico.',
   },
@@ -181,6 +183,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'medio',
     tags: ['TCE', 'desvio linha média', 'PIC', 'neurocirurgia'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Intracranial_bleed_with_significant_midline_shift.png/640px-Intracranial_bleed_with_significant_midline_shift.png',
     explanation:
       'Desvio de linha média ≥ 5 mm com compressão ventricular indica hipertensão intracraniana significativa e possível necessidade de intervenção cirúrgica. A monitorização da PIC e avaliação neurocirúrgica urgente são mandatórias. A punção lombar é contraindicada (risco de herniação). RM não é exame de escolha na emergência aguda de TCE.',
   },
@@ -203,6 +206,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'medio',
     tags: ['TC', 'AVE', 'ACM', 'sinal hiperdensa', 'isquêmico'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/SAH.png/640px-SAH.png',
     explanation:
       'O sinal da ACM hiperdensa corresponde à visualização de coágulo (trombo) intraluminal na artéria cerebral média na TC sem contraste, aparecendo como hiperdensidade espontânea no trajeto da ACM. Tem sensibilidade de ~35–40% mas especificidade ~90%. É um sinal de fase hiperaguda, identificável antes mesmo das alterações isquêmicas parenquimatosas. Orienta para indicação de trombólise/trombectomia imediata.',
   },
@@ -365,6 +369,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'facil',
     tags: ['TC', 'HSA', 'hemorragia subaracnóidea', 'cisternas'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Subarachnoid_hemorrhage_CT.jpg/640px-Subarachnoid_hemorrhage_CT.jpg',
     explanation:
       'A TC de crânio sem contraste é o exame de escolha na suspeita de HSA aguda (sensibilidade ~98% nas primeiras 12h). O sangue nas cisternas subaracnóideas, sulcos corticais e fissura inter-hemisférica aparece como hiperdensidade espontânea. A distribuição mais perimesencefálica (cisterna interpeduncular, quadrigeminal) sugere causa não aneurismática e melhor prognóstico. Se TC negativa com forte suspeita clínica, realiza-se punção lombar.',
   },
@@ -459,6 +464,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'facil',
     tags: ['HSA', 'aneurisma', 'TC', 'cisternas basais'],
     source: 'Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/CT_scan_-_subarachnoid_hemorrhage.jpg/640px-CT_scan_-_subarachnoid_hemorrhage.jpg',
     explanation:
       'Aneurismas saculares (berry aneurysms) são responsáveis por ~85% das HSA não traumáticas. Localizam-se preferencialmente nas bifurcações do polígono de Willis (comunicante anterior, comunicante posterior, ACM). Na TC, o sangue nas cisternas basais e fissura sylviana é hiperdensa. A distribuição do sangue pode sugerir a localização do aneurisma roto. Angio-TC ou angio-RM são realizados para identificar e caracterizar o aneurisma.',
   },
@@ -773,6 +779,7 @@ export const QUESTIONS: Question[] = [
     difficulty: 'facil',
     tags: ['EM', 'RM', 'Dawson fingers', 'FLAIR', 'periventricular'],
     source: 'QUIZ CVCC / Monitoria UNIMA 2026',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/MULTIPLE_SCLEROSIS.JPG/640px-MULTIPLE_SCLEROSIS.JPG',
     explanation:
       'Os "dedos de Dawson" (Dawson fingers) são lesões desmielinizantes ovóides que se dispõem perpendicularmente ao eixo longitudinal dos ventrículos laterais, acompanhando o trajeto das veias medulares (venulas pericentriculares). São mais bem visualizados na RM FLAIR sagital, onde aparecem como "dedos" apontando do ventrículo em direção ao córtex. Esse padrão é altamente sugestivo de EM e reflete a inflamação perivenular característica da doença.',
   },
