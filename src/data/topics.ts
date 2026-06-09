@@ -7,7 +7,7 @@ export const TOPICS: Topic[] = [
     description: 'Traumatismo Cranioencefálico — fraturas, hematomas, escalas de Glasgow',
     icon: 'Brain',
     color: '#EF4444',
-    questionCount: 15,
+    questionCount: 18,
     driveFileId: '155MQby7jWZ7xqkA9n0xvcfnhKAzf01Sb',
   },
   {

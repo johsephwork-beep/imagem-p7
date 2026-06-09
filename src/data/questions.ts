@@ -290,6 +290,61 @@ export const QUESTIONS: Question[] = [
       'Olhos de guaxinim = fratura do andar anterior da base (etmoide, frontal) → equimose periorbital. Sinal de Battle = fratura do temporal (mastoide) → equimose retroauricular. O pneumoencéfalo na TC (ar intracraniano) indica comunicação com seio paranasal, células mastoides ou orelha média, confirmando laceração dural associada à fratura de base. Esse achado implica risco de meningite ascendente (S. pneumoniae). Indicação de profilaxia antibiótica é controversa, mas vigilância neurológica é mandatória. Otorragia e rinorragia confirmam o quadro clínico.',
   },
 
+  {
+    id: 'tce-16',
+    topicId: 'tce',
+    text: 'Adolescente de 16 anos cai de bicicleta com impacto occipital. Chega ao PS com ECG 14, cefaleia occipital intensa. TC de crânio sem contraste: coleção hiperdensa de morfologia lenticular (biconvexa) na fossa posterior direita, adjacente ao sulco do seio transverso. Fratura linear occipital cruzando o sulco venoso. Sem lesões supratentoriais. Com base na imagem da TC, qual é o diagnóstico e o que diferencia este HED da forma clássica arterial?',
+    options: [
+      { id: 'A', text: 'Hematoma subdural posterior — ruptura de veias em ponte, morfologia em crescente' },
+      { id: 'B', text: 'Hematoma extradural venoso de fossa posterior — coleção biconvexa adjacente ao seio transverso, originada por fratura occipital sem ruptura da artéria meníngea média' },
+      { id: 'C', text: 'Contusão cerebelar — sangramento intraparenquimatoso sem morfologia biconvexa' },
+      { id: 'D', text: 'Hematoma extradural arterial temporal — ruptura da artéria meníngea média, localização temporal' },
+      { id: 'E', text: 'Hemorragia subaracnóidea de fossa posterior — sangramento difuso nas cisternas' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'facil',
+    tags: ['TCE', 'hematoma extradural', 'venoso', 'fossa posterior', 'seio transverso', 'TC'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'O hematoma extradural venoso de fossa posterior resulta da laceração do seio transverso ou sigmoide (ou veias emissárias occipitais) por fratura occipital que cruza o sulco venoso. Ao contrário do HED arterial clássico (temporal, artéria meníngea média), o venoso: (1) localiza-se na fossa posterior; (2) tem evolução mais lenta (menor pressão venosa); (3) não apresenta intervalo lúcido tão definido. A morfologia biconvexa (lenticular) na TC é a mesma nos dois tipos — é a localização (fossa posterior, adjacente ao seio transverso) e a fratura occipital associada que orientam para a origem venosa.',
+  },
+  {
+    id: 'tce-17',
+    topicId: 'tce',
+    text: 'Homem de 28 anos sofre queda com trauma occipital. ECG deteriora de 14 para 10 em 2 horas. TC de crânio: coleção extradural hiperdensa lenticular na fossa posterior (~20 mL), compressão e desvio do 4º ventrículo para a esquerda, incipiente dilatação dos cornos temporais. A imagem evidencia hematoma extradural venoso de fossa posterior com compressão do 4º ventrículo. Qual é a complicação mais temida que justifica indicação cirúrgica de urgência?',
+    options: [
+      { id: 'A', text: 'Conversão para sangramento arterial com expansão rápida do hematoma' },
+      { id: 'B', text: 'Herniação do lobo temporal através do tentório (hérnia uncal)' },
+      { id: 'C', text: 'Hidrocefalia obstrutiva por obstrução do 4º ventrículo com risco de hérnia tonsilar pelo forame magno' },
+      { id: 'D', text: 'Contusão secundária do córtex cerebelar por compressão progressiva' },
+      { id: 'E', text: 'Trombose do seio sagital por propagação venosa retrógrada' },
+    ],
+    correctAnswer: 'C',
+    difficulty: 'medio',
+    tags: ['TCE', 'hematoma extradural', 'venoso', 'fossa posterior', '4º ventrículo', 'hidrocefalia', 'hérnia tonsilar'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'A fossa posterior tem volume muito limitado (~200 mL). Mesmo hematomas relativamente pequenos podem comprimir o 4º ventrículo, obstruir o fluxo de LCR e causar hidrocefalia obstrutiva aguda. A dilatação dos cornos temporais na TC confirma esse processo. A consequência mais grave é a hérnia das amígdalas cerebelares pelo forame magno — comprime o bulbo, bloqueia centros cardiovascular e respiratório e pode ser fatal em minutos. Indicação cirúrgica: volume > 10 mL, espessura > 5 mm, compressão do 4º ventrículo ou deterioração neurológica. O monitoramento seriado da TC (6/6h) é obrigatório no manejo conservador.',
+  },
+  {
+    id: 'tce-18',
+    topicId: 'tce',
+    text: 'Ciclista de 22 anos sofre trauma no vértice craniano (impacto direto no topo da cabeça). ECG 14. TC de crânio: coleção hiperdensa lenticular parasagital no vértice, adjacente ao seio sagital superior, sem cruzar a linha média. Fratura linear cruzando o sulco do seio sagital superior. Imagem mostra hematoma extradural venoso adjacente ao seio sagital superior. Qual é o principal desafio cirúrgico que NÃO existe no HED arterial temporal clássico?',
+    options: [
+      { id: 'A', text: 'Maior dificuldade de acesso cirúrgico pela localização parasagital' },
+      { id: 'B', text: 'Risco elevado de fístula liquórica pós-operatória na região do vértice' },
+      { id: 'C', text: 'Tendência à extensão bilateral que exige craniotomia bilateral simultânea' },
+      { id: 'D', text: 'O seio sagital superior não pode ser ligado — qualquer lesão durante a evacuação gera trombose venosa com infarto hemorrágico bilateral catastrófico' },
+      { id: 'E', text: 'Maior incidência de ressangramento pós-operatório pela pressão venosa pulsátil' },
+    ],
+    correctAnswer: 'D',
+    difficulty: 'dificil',
+    tags: ['TCE', 'hematoma extradural', 'venoso', 'seio sagital', 'vértice', 'cirurgia', 'trombose venosa'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'O HED venoso adjacente ao seio sagital superior é tecnicamente mais complexo que o arterial porque o seio sagital superior não pode ser sacrificado (ao contrário da artéria meníngea média). Ele drena as veias corticais de ambos os hemisférios; sua oclusão causa trombose venosa bilateral com infarto hemorrágico e alta mortalidade. O planejamento cirúrgico exige venografia (AngioTC ou AngioRM) para avaliar a permeabilidade do seio antes da craniotomia. Durante a evacuação, a dissecção deve ser meticulosa para evitar qualquer lesão da parede do seio. Adicionalmente, a fratura pode já estar causando compressão parcial do seio, fenômeno que deve ser identificado no pré-operatório.',
+  },
+
   // ─────────────────────────────────────────
   // AVE — Acidente Vascular Encefálico
   // ─────────────────────────────────────────
