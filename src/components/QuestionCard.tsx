@@ -105,8 +105,8 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         <QuestionImage key={img.id} url={img.public_url} caption={img.caption} />
       ))}
 
-      {/* Imagem Drive/URL (campo image legado) — exibida junto ao enunciado */}
-      {question.image && !question.image.showAfterAnswer && (
+      {/* Imagem Drive/URL (campo image legado) — só exibe se não há imagens Supabase */}
+      {question.image && !question.image.showAfterAnswer && imagesWithQuestion.length === 0 && !imagesLoading && (
         <QuestionImage
           url={question.image.type === 'drive'
             ? getDriveThumbnailUrl(question.image.src, 'md')
@@ -243,8 +243,8 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         </div>
       )}
 
-      {/* Imagem Drive/URL (campo image legado) revelada após resposta */}
-      {question.image?.showAfterAnswer && state === 'revealed' && (
+      {/* Imagem Drive/URL (campo image legado) revelada após resposta — só se não há Supabase */}
+      {question.image?.showAfterAnswer && state === 'revealed' && imagesAfterAnswer.length === 0 && (
         <div className="mt-4">
           <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
             Imagem de referência

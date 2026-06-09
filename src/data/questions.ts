@@ -1,4 +1,4 @@
-import type { Question } from '../types';
+﻿import type { Question } from '../types';
 
 export const QUESTIONS: Question[] = [
   // ─────────────────────────────────────────
@@ -899,42 +899,6 @@ export const QUESTIONS: Question[] = [
       'O nigrossomo-1 é uma sub-região da substância negra pars compacta (SNpc) rica em neurônios dopaminérgicos. Em indivíduos saudáveis, nas sequências SWI (susceptibilidade) ou neuromelanina-RM, aparece como uma área de hiperssinal lateral na SNpc — bilateralmente, formam as "caudas de andorinha" (swallow tail). Na DP, há perda seletiva desses neurônios, desaparecendo o hiperssinal = perda do sinal da swallow tail. É um biomarcador de imagem de alta especificidade para DP.',
   },
   {
-    id: 'parkinson-02',
-    topicId: 'parkinson',
-    text: 'Como a RM diferencia a Doença de Parkinson (DP) da Paralisia Supranuclear Progressiva (PSP) através do índice MRPI?',
-    options: [
-      { id: 'A', text: 'MRPI avalia o volume do putâmen — reduzido na DP e normal na PSP' },
-      { id: 'B', text: 'MRPI = (área do mesencéfalo / área da ponte) × (área do cerebelo / área do vermis) — reduzido na PSP por atrofia do mesencéfalo' },
-      { id: 'C', text: 'MRPI compara espessura do corpo caloso entre DP e PSP' },
-      { id: 'D', text: 'MRPI avalia relação entre putâmen e caudado — invertida na PSP' },
-      { id: 'E', text: 'MRPI mede relação mesencéfalo/terceiro ventrículo — aumentado na PSP' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'dificil',
-    tags: ['RM', 'Parkinson', 'PSP', 'MRPI', 'mesencéfalo'],
-    source: 'Monitoria UNIMA 2026',
-    explanation:
-      'O MRPI (MR Parkinsonism Index) é calculado: (área axial da ponte / área axial do mesencéfalo) × (largura do pedúnculo cerebelar médio / largura do pedúnculo cerebelar superior). MRPI > 13,55 tem alta sensibilidade e especificidade para PSP vs. DP. Na PSP, a atrofia do mesencéfalo ("sinal do beija-flor" no sagital, "sinal do Mickey Mouse" no axial) eleva o MRPI. Já o "sinal do hot cross bun" (crucifix no axial) é característico da AMS-C.',
-  },
-  {
-    id: 'parkinson-03',
-    topicId: 'parkinson',
-    text: 'A Neuromelanina-MRI (NM-MRI) na DP: o que visualiza e qual a diferença entre paciente com DP e indivíduo saudável?',
-    options: [
-      { id: 'A', text: 'Visualiza depósito de ferro no putâmen — aumentado na DP' },
-      { id: 'B', text: 'Visualiza neuromelanina nos neurônios dopaminérgicos da SNpc — hiperssinal reduzido ou ausente na DP por morte neuronal' },
-      { id: 'C', text: 'Visualiza proteína alfa-sinucleína — agregados detectáveis na SNpc' },
-      { id: 'D', text: 'Visualiza dopamina livre — reduzida no estriado da DP' },
-      { id: 'E', text: 'Visualiza MAO-B — elevada nos gânglios da base da DP' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'dificil',
-    tags: ['RM', 'Parkinson', 'neuromelanina', 'NM-MRI', 'SNpc'],
-    source: 'Monitoria UNIMA 2026',
-    explanation:
-      'A neuromelanina é um pigmento produzido pelo metabolismo da dopamina nos neurônios da SNpc e do locus coeruleus. Na NM-MRI (sequência turbo spin-echo ponderada em T1 com supressão de gordura), a neuromelanina aparece como hiperssinal nessas estruturas. Na DP, a morte dos neurônios dopaminérgicos reduz o volume e sinal da SNpc na NM-MRI. Estudos mostram redução de ~30–50% do sinal na DP comparado a controles saudáveis, com correlação ao estágio da doença.',
-  },
-  {
     id: 'parkinson-04',
     topicId: 'parkinson',
     text: 'Quais são os critérios clínicos essenciais (mandatórios) para o diagnóstico de Doença de Parkinson segundo o MDS (Movement Disorder Society)?',
@@ -951,42 +915,6 @@ export const QUESTIONS: Question[] = [
     source: 'Monitoria UNIMA 2026',
     explanation:
       'Pelos critérios MDS-2015, o Parkinsonismo é definido por bradicinesia (obrigatória) + rigidez muscular e/ou tremor de repouso (4–6 Hz). O diagnóstico clínico de DP provável exige: parkinsonismo + ausência de critérios de exclusão + pelo menos 2 critérios de suporte (boa resposta à levodopa, discinesias induzidas por levodopa, tremor de repouso, hiposmia ou desnervação simpática cardíaca na cintilografia). Sinais de alerta (red flags) sugerem parkinsonismos atípicos.',
-  },
-  {
-    id: 'parkinson-05',
-    topicId: 'parkinson',
-    text: 'Corpo de Lewy: qual substância e proteína envolvida, e em quais condições são encontrados?',
-    options: [
-      { id: 'A', text: 'Núcleo de ubiquitina com halo de tau — apenas na DP' },
-      { id: 'B', text: 'Agregados de alfa-sinucleína — DP, Demência com Corpos de Lewy (DCL) e Atrofia de Múltiplos Sistemas (AMS)' },
-      { id: 'C', text: 'Depósito de beta-amilóide — DP e Alzheimer' },
-      { id: 'D', text: 'Emaranhado de proteína TDP-43 — DP e ELA' },
-      { id: 'E', text: 'Agregado de huntingtina — DP e Huntington' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['Parkinson', 'corpo de Lewy', 'alfa-sinucleína', 'patologia'],
-    source: 'Monitoria UNIMA 2026',
-    explanation:
-      'Os corpos de Lewy são inclusões citoplasmáticas eosinofílicas compostas principalmente de alfa-sinucleína (SNCA) hiperfosforilada e ubiquitinada. São a marca patológica da DP (SNpc), da Demência com Corpos de Lewy (córtex) e estão presentes na AMS (glial cytoplasmic inclusions — GCIs). A propagação trans-sináptica da alfa-sinucleína misfolded (hipótese de Braak) explica o estadiamento anatomopatológico da DP: plexo entérico → núcleo dorsal do vago → SNpc → córtex.',
-  },
-  {
-    id: 'parkinson-06',
-    topicId: 'parkinson',
-    text: 'O "sinal do hot cross bun" em T2 na RM de encéfalo é patognomônico de qual síndrome parkinsoniana?',
-    options: [
-      { id: 'A', text: 'Paralisia Supranuclear Progressiva (PSP)' },
-      { id: 'B', text: 'Degeneração Corticobasal (DCB)' },
-      { id: 'C', text: 'Atrofia de Múltiplos Sistemas variante cerebelar (AMS-C)' },
-      { id: 'D', text: 'Doença de Parkinson idiopática (DP)' },
-      { id: 'E', text: 'Demência com Corpos de Lewy (DCL)' },
-    ],
-    correctAnswer: 'C',
-    difficulty: 'medio',
-    tags: ['RM', 'Parkinson', 'AMS', 'hot cross bun', 'ponte'],
-    source: 'Monitoria UNIMA 2026',
-    explanation:
-      'O "sinal do hot cross bun" corresponde a hipersinal em T2 no formato de cruz na ponte, causado pela degeneração das fibras pontocerebelares transversas com preservação relativa do trato corticoespinal e fibras pontinas longitudinais. É encontrado na AMS variante cerebelar (AMS-C / olivopontocerebelar). Outros achados de AMS-C: hipossinal putaminal em T2* (ferro), fenda putaminal lateral em T2. O "sinal do beija-flor" (atrofia do mesencéfalo) é da PSP.',
   },
   {
     id: 'parkinson-07',
@@ -1007,152 +935,62 @@ export const QUESTIONS: Question[] = [
       'O DaTscan utiliza ioflupano marcado com I123, que se liga ao transportador de dopamina (DAT) pré-sináptico nas terminações dopaminérgicas do estriado. Na DP, há degeneração nigroestriatal → redução dos terminais dopaminérgicos → captação reduzida no putâmen (putâmen < caudado = padrão "vírgula" invertida). No tremor essencial, a via nigroestriatal é intacta → captação normal ("vírgula" bilateral normal). DaTscan é útil quando clinicamente duvidoso; não diferencia DP de outros parkinsonismos degenerativos.',
   },
   {
-    id: 'parkinson-08',
+    id: 'parkinson-p1',
     topicId: 'parkinson',
-    text: 'Qual síndrome parkinsoniana apresenta o "sinal do beija-flor" na RM sagital e o "sinal do olho do tigre" no T2 não está presente?',
+    text: 'Na RM de encéfalo de um paciente com suspeita de Doença de Parkinson, o "sinal da cauda de andorinha" (swallow tail sign) está AUSENTE na sequência SWI. Qual a interpretação clínica mais correta desse achado isolado?',
     options: [
-      { id: 'A', text: 'AMS-P' },
-      { id: 'B', text: 'Degeneração Corticobasal' },
-      { id: 'C', text: 'Paralisia Supranuclear Progressiva (PSP)' },
-        { id: 'D', text: 'Neurodegeneração com acúmulo de ferro cerebral (NBIA)' },
-      { id: 'E', text: 'Doença de Wilson' },
+      { id: 'A', text: 'Achado normal em idosos acima de 70 anos, sem significado clínico' },
+      { id: 'B', text: 'Indica perda dos neurônios dopaminérgicos do nigrossomo-1 — sugestivo de degeneração nigroestriatal (Doença de Parkinson)' },
+      { id: 'C', text: 'Indica hiperatividade dopaminérgica por excesso de produção de neuromelanina' },
+      { id: 'D', text: 'Representa desmielinização da substância negra por esclerose múltipla' },
+      { id: 'E', text: 'Indica depósito de ferro no globo pálido — NBIA/PKAN' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'facil',
+    tags: ['RM', 'Parkinson', 'swallow tail', 'nigrossomo', 'SWI', 'diagnóstico'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'O sinal da cauda de andorinha (swallow tail sign) corresponde ao hiperssinal bilateral do nigrossomo-1 na substância negra pars compacta (SNpc), visível nas sequências SWI ou NM-MRI em indivíduos saudáveis. Na Doença de Parkinson, a morte seletiva dos neurônios dopaminérgicos do nigrossomo-1 faz desaparecer esse sinal. A ausência bilateral do swallow tail é biomarcador de alta especificidade para degeneração nigroestriatal, especialmente útil nos casos clinicamente incertos entre DP e tremor essencial.',
+  },
+  {
+    id: 'parkinson-p2',
+    topicId: 'parkinson',
+    text: 'Paciente com tremor de repouso unilateral à direita e bradicinesia. DaTscan mostra captação assimétrica: marcada redução no putâmen esquerdo com caudado esquerdo relativamente preservado. Como interpretar esse padrão?',
+    options: [
+      { id: 'A', text: 'Padrão "gaivota" bilateral simétrico — descarta Doença de Parkinson' },
+      { id: 'B', text: 'Captação reduzida difusa bilateral — típico de tremor essencial bilateral' },
+      { id: 'C', text: 'Padrão em "vírgula" assimétrico (putâmen < caudado) — confirma degeneração nigroestriatal compatível com DP' },
+      { id: 'D', text: 'Hipercaptação difusa — parkinsonismo medicamentoso por bloqueador D2' },
+      { id: 'E', text: 'Captação exclusiva do caudado com ausência no putâmen bilateral — padrão de AMS-P' },
     ],
     correctAnswer: 'C',
-    difficulty: 'medio',
-    tags: ['RM', 'PSP', 'Parkinson', 'sinal beija-flor', 'mesencéfalo'],
+    difficulty: 'facil',
+    tags: ['Parkinson', 'DaTscan', 'SPECT', 'putâmen', 'vírgula', 'gaivota', 'diagnóstico'],
     source: 'Monitoria UNIMA 2026',
     explanation:
-      'O "sinal do beija-flor" (hummingbird sign) na RM sagital da PSP: atrofia do mesencéfalo com relativa preservação da ponte, criando o perfil de um beija-flor (mesencéfalo = cabeça pequena, ponte = corpo). O "sinal do Mickey Mouse" é o axial correspondente. O "sinal do olho do tigre" (hipossinal central com halo de hipossinal em T2 no globo pálido) é da NBIA/PKAN (Pantotenatoquinase). PSP: oftalmoplegia supranuclear vertical, queda precoce, disfagia, demência frontal.',
+      'No DaTscan normal, a captação do DAT forma bilateralmente o padrão em "gaivota" (ou duas "vírgulas" simétricas), com caudado e putâmen bem delimitados. Na DP, a degeneração começa no putâmen posterior contralateral ao lado mais afetado: putâmen < caudado, criando o padrão assimétrico em "vírgula" invertida. No tremor essencial, a via nigroestriatal está intacta → DaTscan normal (padrão gaivota). O DaTscan não diferencia DP de outros parkinsonismos degenerativos (PSP, AMS) — todos têm captação reduzida.',
   },
   {
-    id: 'parkinson-09',
+    id: 'parkinson-p3',
     topicId: 'parkinson',
-    text: 'FDG-PET na DP: qual o padrão metabólico característico (PDRP)?',
+    text: 'Qual é o sintoma motor OBRIGATÓRIO (sine qua non) para o diagnóstico de parkinsonismo pelos critérios MDS-2015, sem o qual o diagnóstico de DP não pode ser estabelecido?',
     options: [
-      { id: 'A', text: 'Hipometabolismo do putâmen e tálamo + hipermetabolismo do cerebelo e tronco encefálico' },
-      { id: 'B', text: 'Hipermetabolismo difuso do córtex frontal' },
-      { id: 'C', text: 'Hipometabolismo temporoparietal bilateral' },
-      { id: 'D', text: 'Hipometabolismo do cerebelo com hipermetabolismo do estriado' },
-      { id: 'E', text: 'Hipermetabolismo do córtex motor com hipometabolismo occipital' },
+      { id: 'A', text: 'Tremor de repouso em "pill-rolling" de 4–6 Hz' },
+      { id: 'B', text: 'Rigidez muscular em roda denteada' },
+      { id: 'C', text: 'Bradicinesia — lentidão progressiva dos movimentos voluntários com redução de amplitude' },
+      { id: 'D', text: 'Instabilidade postural com quedas recorrentes' },
+      { id: 'E', text: 'Hipomimia facial e hipofonia' },
     ],
-    correctAnswer: 'A',
-    difficulty: 'dificil',
-    tags: ['Parkinson', 'PET', 'FDG', 'PDRP', 'metabolismo'],
+    correctAnswer: 'C',
+    difficulty: 'facil',
+    tags: ['Parkinson', 'diagnóstico', 'bradicinesia', 'MDS', 'critérios clínicos'],
     source: 'Monitoria UNIMA 2026',
     explanation:
-      'O Padrão Metabólico Relacionado à Doença de Parkinson (PDRP) no FDG-PET inclui: hipermetabolismo relativo do globo pálido interno, putâmen, tálamo, cerebelo e tronco encefálico, associado a hipometabolismo do córtex pré-motor e parietal posterior. Esse padrão refleta a disfunção dos circuitos de alça basais-tálamo-corticais na DP. O PDRP pode ser identificado precocemente, antes dos sintomas motores, e tem correlação com progressão da doença.',
-  },
-  {
-    id: 'parkinson-10',
-    topicId: 'parkinson',
-    text: 'Quais achados de RM favorecem o diagnóstico de Atrofia de Múltiplos Sistemas variante parkinsoniana (AMS-P) em detrimento da DP?',
-    options: [
-      { id: 'A', text: 'Perda do swallow tail sign na SWI' },
-      { id: 'B', text: 'Hipossinal do putâmen posterior em T2 com fenda hiperintensa lateral ("putaminal slit sign")' },
-      { id: 'C', text: 'Atrofia assimétrica do córtex frontoparietal' },
-      { id: 'D', text: 'Atrofia do mesencéfalo com relação mesencéfalo/ponte reduzida' },
-      { id: 'E', text: 'Hiperssinal T2 no tálamo e globo pálido bilateral' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'dificil',
-    tags: ['RM', 'Parkinson', 'AMS-P', 'putâmen', 'diferencial'],
-    source: 'Monitoria UNIMA 2026',
-    explanation:
-      'Na AMS-P, o depósito de ferro no putâmen posterior e a gliose causam: hipossinal putaminal em T2 (> hipossinal normal) e uma fenda hiperintensa lateral em T2 (putaminal slit sign), causada pela gliose da borda lateral do putâmen. Na DP, o putâmen tem sinal normal. Outros achados de AMS: atrofia putaminal, hiperssinal em T2 no pedúnculo cerebelar médio, hipossinal putaminal > hipossinal do globo pálido. A perda do swallow tail é específica de DP e não está presente na AMS.',
-  },
-  {
-    id: 'parkinson-11',
-    topicId: 'parkinson',
-    text: 'Homem de 67 anos com tremor unilateral direito, rigidez assimétrica marcante, apraxia ideomotora da mão direita e "fenômeno da mão alienígena" (alien hand syndrome). RM: atrofia cortical assimétrica predominantemente frontoparietal esquerda. Qual a síndrome parkinsoniana mais provável?',
-    options: [
-      { id: 'A', text: 'Doença de Parkinson idiopática — assimetria clínica esperada' },
-      { id: 'B', text: 'Degeneração Corticobasal (DCB) — taupatia com síndrome corticobasal, atrofia assimétrica frontoparietal contralateral ao lado clínico' },
-      { id: 'C', text: 'Paralisia Supranuclear Progressiva (PSP) — geralmente simétrica' },
-      { id: 'D', text: 'Atrofia de Múltiplos Sistemas-P (AMS-P) — afeta putâmen bilateralmente' },
-      { id: 'E', text: 'Demência com Corpos de Lewy — bilateral e simétrica com alucinações visuais' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'dificil',
-    tags: ['Parkinson', 'DCB', 'degeneração corticobasal', 'atrofia assimétrica', 'alien hand', 'taupatia'],
-    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
-    explanation:
-      'A Degeneração Corticobasal (DCB) é uma taupatia que causa síndrome corticobasal: parkinsonismo assimétrico + apraxia + fenômeno da mão alienígena + distonia + mioclonia. Na RM, a atrofia cortical é marcadamente assimétrica, predominando no lobo frontoparietal CONTRALATERAL ao lado clínico mais afetado (ex.: mão direita afetada = atrofia frontoparietal esquerda). FDG-PET mostra hipometabolismo frontoparietal assimétrico. Não responde à levodopa — diferença fundamental da DP. O diagnóstico definitivo requer neuropatologia.',
-  },
-  {
-    id: 'parkinson-12',
-    topicId: 'parkinson',
-    text: 'Adolescente de 17 anos com movimentos involuntários coreiformes, instabilidade emocional e declínio cognitivo, com pai afetado pela mesma doença. TC/RM de crânio: atrofia bilateral dos núcleos caudados com "aspecto quadrado" dos cornos frontais dos ventrículos laterais. Qual o diagnóstico e o mecanismo genético?',
-    options: [
-      { id: 'A', text: 'Coreia de Sydenham pós-estreptocócica — infecção recente por estreptococo' },
-      { id: 'B', text: 'Doença de Huntington — expansão do trinucleotídeo CAG no gene HTT, herança autossômica dominante' },
-      { id: 'C', text: 'Doença de Wilson — depósito de cobre nos gânglios da base' },
-      { id: 'D', text: 'Neuroacantocitose — acantócitos no sangue periférico' },
-      { id: 'E', text: 'Atrofia de Múltiplos Sistemas cerebelar (AMS-C)' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['Parkinson', 'Huntington', 'caudado', 'coreia', 'TC', 'aspecto quadrado', 'CAG'],
-    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
-    explanation:
-      'A Doença de Huntington é causada por expansão do trinucleotídeo CAG (> 36 repetições) no gene HTT (cromossomo 4), com herança autossômica dominante e antecipação genética. A degeneração seletiva dos neurônios espinhosos médios do núcleo caudado e putâmen causa o "aspecto quadrado" dos cornos frontais: o caudado normal forma uma convexidade medial que desaparece. FDG-PET mostra hipometabolismo do estriado precocemente, antes das alterações estruturais. Início usual: 30–50 anos; forma juvenil < 20 anos (geralmente paterna, CAG muito elevado).',
-  },
-  {
-    id: 'parkinson-13',
-    topicId: 'parkinson',
-    text: 'Mulher de 55 anos com parkinsonismo bilateral simétrico sem tremor, hipotensão ortostática grave e disfunção autonômica severa. RM T2: hipossinal putaminal posterior bilateral com fenda hiperintensa lateral (putaminal slit sign). Qual o diagnóstico?',
-    options: [
-      { id: 'A', text: 'PSP — sinal do beija-flor no mesencéfalo' },
-      { id: 'B', text: 'AMS-P (Atrofia de Múltiplos Sistemas parkinsoniana) — putaminal slit sign + hipossinal putaminal T2 + disfunção autonômica grave' },
-      { id: 'C', text: 'AMS-C — hot cross bun na ponte, não no putâmen' },
-      { id: 'D', text: 'DP idiopática — putâmen com sinal normal na RM' },
-      { id: 'E', text: 'DCB — atrofia frontoparietal assimétrica' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['RM', 'Parkinson', 'AMS-P', 'putaminal slit', 'hipossinal putaminal', 'autonômico'],
-    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
-    explanation:
-      'Na AMS-P, a degeneração do putâmen posterior causa: hipossinal em T2 (depósito de ferro + gliose) e fenda hiperintensa lateral — "putaminal slit sign". A disfunção autonômica grave (hipotensão ortostática, incontinência, disfunção erétil) diferencia AMS da DP. A AMS-C tem hot cross bun na ponte. A resposta à levodopa na AMS-P é transitória/parcial vs. DP (excelente resposta). DaTscan está alterado na AMS e na DP (ambas nigroestriatais), mas o putaminal slit distingue AMS-P. Sobrevida média: 8–10 anos.',
-  },
-  {
-    id: 'parkinson-14',
-    topicId: 'parkinson',
-    text: 'Idoso de 72 anos com marcha a pequenos passos, instabilidade postural e quedas desde o início, sem tremor em repouso. Mínima resposta à levodopa em dose-teste. RM: leucoaraiose periventricular confluente e múltiplas lacunas nos gânglios da base. DaTscan: normal. Qual o diagnóstico mais provável?',
-    options: [
-      { id: 'A', text: 'Doença de Parkinson idiopática — início assimétrico típico' },
-      { id: 'B', text: 'Parkinsonismo vascular — lesões vasculares subcorticais múltiplas com DaTscan normal' },
-      { id: 'C', text: 'PSP — sinal do beija-flor com DaTscan alterado' },
-      { id: 'D', text: 'HPN (hidrocefalia de pressão normal) — tríade de Hakim com ventrículos dilatados' },
-      { id: 'E', text: 'DCB — atrofia frontoparietal assimétrica na RM' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['Parkinson', 'parkinsonismo vascular', 'leucoaraiose', 'DaTscan normal', 'RM'],
-    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
-    explanation:
-      'O parkinsonismo vascular resulta de múltiplos infartos lacunares nos gânglios da base e substância branca profunda, comprometendo os circuitos basais. Características: predomínio de sintomas axiais (marcha, equilíbrio) > membros, início insidioso ou em degraus, mínima resposta à levodopa. Na RM: leucoaraiose (FLAIR/T2 periventricular confluente), lacunas no putâmen, tálamo e cápsula interna. O DaTscan NORMAL é o achado-chave — diferencia do parkinsonismo degenerativo (DP, PSP, AMS), que tem captação reduzida. Segunda causa mais comum de parkinsonismo após a DP.',
-  },
-  {
-    id: 'parkinson-15',
-    topicId: 'parkinson',
-    text: 'Na RM sagital de encéfalo da PSP (Paralisia Supranuclear Progressiva), o "sinal do beija-flor" resulta de que alteração e qual índice quantitativo o confirma?',
-    options: [
-      { id: 'A', text: 'Dilatação do mesencéfalo com ponte preservada — relação M/P > 0,8' },
-      { id: 'B', text: 'Atrofia seletiva do mesencéfalo com relativa preservação da ponte — diâmetro AP do mesencéfalo < 14 mm e razão área mesencéfalo/área ponte < 0,52' },
-      { id: 'C', text: 'Atrofia simétrica de todo o tronco — mesencéfalo/ponte = 1,0 na PSP' },
-      { id: 'D', text: 'Atrofia isolada do dorso do mesencéfalo com sinal do olho do tigre' },
-      { id: 'E', text: 'Atrofia da ponte preservando o mesencéfalo — padrão inverso ao da PSP' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'dificil',
-    tags: ['RM', 'PSP', 'Parkinson', 'sinal beija-flor', 'mesencéfalo', 'MRPI', 'índice'],
-    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
-    explanation:
-      'Na PSP, a atrofia seletiva do mesencéfalo (< 14 mm AP) com relativa preservação da ponte cria o "sinal do beija-flor" sagital: mesencéfalo = cabeça pequena do pássaro, ponte = corpo. No axial, o "sinal do Mickey Mouse". A razão área mesencéfalo/área ponte < 0,52 e o MRPI (MR Parkinsonism Index = [ponte/mesencéfalo] × [PCM/PCS]) > 13,55 têm alta especificidade para PSP. A AMS-C mostra o padrão oposto: atrofia predominante da ponte (hot cross bun) preservando relativamente o mesencéfalo. Ambas se distinguem da DP (tronco normal).',
+      'Pelos critérios MDS-2015, a bradicinesia é o único sintoma OBRIGATÓRIO para o diagnóstico de parkinsonismo: lentidão progressiva dos movimentos voluntários com redução de amplitude ou velocidade em movimentos repetitivos ("finger tapping", "hand openings"). Pelo menos um de tremor de repouso OU rigidez em roda denteada deve estar presente para completar o diagnóstico. O tremor, embora classicamente associado, NÃO é obrigatório — formas acinético-rígidas sem tremor são diagnóstico válido de DP. A instabilidade postural precoce e quedas sugerem parkinsonismo atípico (PSP), não DP.',
   },
 
   // ─────────────────────────────────────────
-  // EM & SGB — Esclerose Múltipla & Guillain-Barré
+  // EM & Epilepsia — Esclerose Múltipla e Epilepsia
   // ─────────────────────────────────────────
   {
     id: 'em-01',
@@ -1234,78 +1072,6 @@ export const QUESTIONS: Question[] = [
       'A NMO (anti-AQP4+) produz mielite longitudinalmente extensa (LETM): lesão central em T2 abrangendo ≥ 3 segmentos vertebrais, com predileção cervical e torácica. A EM medular causa lesões curtas (< 2 segmentos), periféricas e assimétricas. Na fase aguda, a lesão da NMO pode captar contraste e causar hipossinal em T1 (necrose). O anticorpo anti-AQP4 (aquaporina-4) é altamente específico para NMO. A anti-MOG+ também causa LETM mas com lesões mais extensas no cone.',
   },
   {
-    id: 'em-05',
-    topicId: 'em_sgb',
-    text: 'Na Síndrome de Guillain-Barré (SGB), qual é o achado característico na RM de coluna lombar com contraste?',
-    options: [
-      { id: 'A', text: 'Compressão das raízes por protrusão discal múltipla' },
-      { id: 'B', text: 'Realce das raízes da cauda equina por gadolínio — inflamação das raízes nervosas' },
-      { id: 'C', text: 'Mielite longitudinal extensa do cone medular' },
-      { id: 'D', text: 'Atrofia dos corpos vertebrais com colapso' },
-      { id: 'E', text: 'Coleção epidural hipervascularizada' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['SGB', 'Guillain-Barré', 'RM', 'cauda equina', 'realce'],
-    source: 'QUIZ CVCC / Monitoria UNIMA 2026',
-    explanation:
-      'Na SGB, a polirradiculoneuropatia desmielinizante aguda causa inflamação das raízes nervosas. Na RM de coluna lombossacra com gadolínio, as raízes da cauda equina apresentam realce pelo contraste (enancement), refletindo ruptura da barreira hematoneural e inflamação. Esse achado pode ser visto em até 85% dos casos e apoia o diagnóstico. No LCR: dissociação albumino-citológica (proteína elevada com celularidade normal). Eletroneuromiografia confirma polineuropatia desmielinizante.',
-  },
-  {
-    id: 'em-06',
-    topicId: 'em_sgb',
-    text: 'Qual é o principal achado do LCR na SGB e o exame confirmatório?',
-    options: [
-      { id: 'A', text: 'Pleocitose linfocítica > 100 células + proteína normal — LCR inflamatório' },
-      { id: 'B', text: 'Dissociação albumino-citológica (proteína elevada com celularidade normal ou < 10 células/mm³) + eletroneuromiografia mostrando desmielinização' },
-      { id: 'C', text: 'Glicose reduzida + proteína muito elevada — meningite bacteriana' },
-      { id: 'D', text: 'Bandas oligoclonais IgG + índice de IgG elevado' },
-      { id: 'E', text: 'LCR hemorrágico + xantocromia' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'facil',
-    tags: ['SGB', 'Guillain-Barré', 'LCR', 'dissociação albumino-citológica', 'ENMG'],
-    source: 'QUIZ CVCC / Monitoria UNIMA 2026',
-    explanation:
-      'A dissociação albumino-citológica (proteína alta com celularidade normal) é o achado clássico do LCR na SGB, presente em ~80% após a primeira semana. Pode estar normal nas primeiras 48–72h. A eletroneuromiografia (ENMG) confirma o padrão e subtipo: AIDP (desmielinizante, mais comum no ocidente), AMAN ou AMSAN (axonal, mais comum na Ásia — anti-GM1, GM1b). Tratamento: IVIG ou plasmaférese (equivalentes). Corticoide não tem benefício na SGB.',
-  },
-  {
-    id: 'em-07',
-    topicId: 'em_sgb',
-    text: 'Schwannoma vestibular (neurinoma do acústico): qual a apresentação clínica clássica e o achado na RM?',
-    options: [
-      { id: 'A', text: 'Cefaleia + paralisia facial aguda — lesão hiperdensa no CPA na TC' },
-      { id: 'B', text: 'Hipoacusia neurossensorial unilateral progressiva + zumbido — massa no CAI/APC com realce intenso após gadolínio em T1' },
-      { id: 'C', text: 'Vertigem posicional + nistagmo horizontal — lesão no canal semicircular' },
-      { id: 'D', text: 'Surdez bilateral súbita — lesão desmielinizante do VIII nervo' },
-      { id: 'E', text: 'Disfagia + disfonia — lesão no forame jugular' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'facil',
-    tags: ['schwannoma', 'neurinoma acústico', 'RM', 'CAI', 'hipoacusia'],
-    source: 'QUIZ CVCC / Monitoria UNIMA 2026',
-    explanation:
-      'O schwannoma vestibular (VS) origina-se da célula de Schwann do nervo vestibular superior no canal auditivo interno (CAI). Clínica: hipoacusia neurossensorial unilateral progressiva (mais frequente), zumbido, raramente vertigem. Na RM: isossinal ou levemente hipossinal em T1, hiperssinal em T2, realce intenso e homogêneo após gadolínio. A lesão cresce do CAI para o ângulo pontocerebelar (APC) — aspecto em "sorvete no cone" ou "nó de gravata". Contraindicação ao gadolínio → sequências 3D CISS/FIESTA no CAI.',
-  },
-  {
-    id: 'em-08',
-    topicId: 'em_sgb',
-    text: 'Paciente com NF2 (Neurofibromatose tipo 2) tem schwannomas bilaterais dos nervos vestibulares. Qual o gene afetado e o achado clássico de imagem?',
-    options: [
-      { id: 'A', text: 'Gene NF1 (neurofibromina) — schwannomas periféricos múltiplos' },
-      { id: 'B', text: 'Gene NF2 (merlina/schwannomina) — schwannomas vestibulares bilaterais na RM com gadolínio' },
-      { id: 'C', text: 'Gene TSC1 (hamartina) — tubers corticais e nódulos subependimários' },
-      { id: 'D', text: 'Gene VHL — hemangioblastomas cerebelares e retinianos' },
-      { id: 'E', text: 'Gene SMARCB1 — rabdoide atípico teratoide' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['NF2', 'schwannoma bilateral', 'RM', 'gene NF2'],
-    source: 'QUIZ CVCC / Monitoria UNIMA 2026',
-    explanation:
-      'A NF2 é causada por mutação do gene NF2 (cromossomo 22q12) que codifica a proteína supressora de tumor merlina. O critério diagnóstico patognomônico é a presença de schwannomas vestibulares bilaterais. Na RM com gadolínio, as massas captantes são visualizadas no CAI e APC bilateralmente. Outros achados: meningiomas múltiplos, ependimomas medulares, schwannomas de outros pares cranianos. Diferente da NF1, que cursa com neurofibromas cutâneos, manchas café-com-leite e gliomas ópticos.',
-  },
-  {
     id: 'em-09',
     topicId: 'em_sgb',
     text: 'Na EM, qual a importância da sequência 3D T2 FLAIR na detecção de lesões corticais/juxtacorticais e por que é superior ao FLAIR convencional 2D?',
@@ -1322,24 +1088,6 @@ export const QUESTIONS: Question[] = [
     source: 'QUIZ CVCC / Monitoria UNIMA 2026',
     explanation:
       'O FLAIR 3D (como CUBE, SPACE ou VISTA) tem espessura de corte isotrópica (~1 mm³) com reformatações multiplanares, melhor supressão do LCR cortical e menor efeito de volume parcial. Isso aumenta significativamente a detecção de lesões corticais e juxtacorticais, que nos critérios de McDonald 2017 contam como uma categoria de DIS (regiões corticais). O FLAIR 2D frequentemente perde lesões corticais por artefato de LCR adjacente. A sequência DIR (Double Inversion Recovery) é ainda mais sensível para lesões intracorticais.',
-  },
-  {
-    id: 'em-10',
-    topicId: 'em_sgb',
-    text: 'Na variante de Miller Fisher da SGB, qual a tríade clínica característica e os anticorpos associados?',
-    options: [
-      { id: 'A', text: 'Fraqueza proximal + arreflexia + parestesias — anti-GD1b' },
-      { id: 'B', text: 'Oftalmoplegia + ataxia + arreflexia — anti-GQ1b' },
-      { id: 'C', text: 'Disfagia + disartria + fraqueza facial — anti-GM1' },
-      { id: 'D', text: 'Paralisia facial bilateral + parestesias + retenção urinária — anti-GD1a' },
-      { id: 'E', text: 'Ptose + diplopia + pupilas fixas — anti-AGNA' },
-    ],
-    correctAnswer: 'B',
-    difficulty: 'medio',
-    tags: ['SGB', 'Miller Fisher', 'anti-GQ1b', 'oftalmoplegia', 'ataxia'],
-    source: 'QUIZ CVCC / Monitoria UNIMA 2026',
-    explanation:
-      'A síndrome de Miller Fisher (SMF) é uma variante da SGB que representa ~5% dos casos. Tríade clássica: oftalmoplegia (paralisia dos músculos extraoculares), ataxia cerebelar e arreflexia. É fortemente associada aos anticorpos anti-GQ1b IgG (presentes em ~90% dos casos). O GQ1b é um gangliosídeo abundante no nervo oculomotor e no nódulo de Ranvier dos nervos cranianos. O prognóstico é geralmente favorável, com recuperação espontânea em semanas a meses.',
   },
   {
     id: 'em-11',
@@ -1484,5 +1232,59 @@ export const QUESTIONS: Question[] = [
     source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
     explanation:
       'A Leucoencefalopatia Multifocal Progressiva (LMP) resulta da reativação do vírus JC em imunossuprimidos graves (CD4 < 100/mm³ no HIV, ou uso de natalizumabe/rituximabe). RM: lesões desmielinizantes confluentes na SB parieto-occipital, sem efeito de massa, SEM realce (ausência de inflamação = BHE íntegra). DWI: restrição periférica nas bordas ativas ("lesões em arco"). Diferencia-se da EM: sem bandas oligoclonais, CD4 < 100, sem realce por Gd. Tratamento: HAART (restaurar imunidade); a IRIS (síndrome inflamatória de reconstituição) pode paradoxalmente piorar clinicamente antes de melhorar.',
+  },
+  {
+    id: 'em-epi-1',
+    topicId: 'em_sgb',
+    text: 'Qual é o conjunto de achados de RM de 3T que confirma o diagnóstico de Esclerose Hipocampal Mesial (EHM) em protocolo de epilepsia?',
+    options: [
+      { id: 'A', text: 'Hipersinal T1 + hipossinal T2/FLAIR no hipocampo + aumento volumétrico' },
+      { id: 'B', text: 'Hipossinal T1 + hipersinal T2/FLAIR + atrofia hipocampal + perda da laminação interna' },
+      { id: 'C', text: 'Realce heterogêneo após gadolínio com edema perilesional extenso' },
+      { id: 'D', text: 'Hipossinal difuso em T2 com calcificações em ambos os hipocampos' },
+      { id: 'E', text: 'Espessamento cortical do giro para-hipocampal com sinal transmantle' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'facil',
+    tags: ['RM', 'esclerose hipocampal', 'epilepsia', 'temporal mesial', '3T', 'EHM'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'A esclerose hipocampal mesial (EHM) apresenta na RM de 3T protocolo epilepsia: (1) hipossinal em T1, (2) hipersinal em T2/FLAIR (gliose reativa), (3) atrofia hipocampal — redução volumétrica > 20% vs. contralateral, e (4) perda da laminação interna (apagamento da arquitetura CA1-CA4 no corte coronal de alta resolução). Esses 4 achados são diagnósticos de EHM. É a causa mais comum de epilepsia temporal mesial refratária e a indicação cirúrgica mais frequente em epilepsia no adulto.',
+  },
+  {
+    id: 'em-epi-2',
+    topicId: 'em_sgb',
+    text: 'Mulher de 30 anos com epilepsia temporal mesial refratária desde os 12 anos. Relata crise febril prolongada (> 30 min) aos 2 anos de idade. RM: atrofia hipocampal esquerda com hipersinal FLAIR. Qual a relação fisiopatológica entre a crise febril e a EHM atual?',
+    options: [
+      { id: 'A', text: 'A crise febril foi causada pela EHM preexistente — achados coincidentes sem relação causal' },
+      { id: 'B', text: 'A crise febril prolongada pode causar excitotoxicidade hipocampal ("lesão inicial"), predispondo ao desenvolvimento tardio de EHM e epilepsia temporal mesial' },
+      { id: 'C', text: 'A EHM é sempre congênita, sem relação com eventos pós-natais adquiridos' },
+      { id: 'D', text: 'A crise febril leva a EHM apenas em portadores de mutação no gene SCN1A' },
+      { id: 'E', text: 'Não há relação estabelecida — EHM resulta exclusivamente de infecções virais do hipocampo' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['EHM', 'esclerose hipocampal', 'crise febril', 'epilepsia temporal mesial', 'lesão inicial', 'fisiopatologia'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'A hipótese da "lesão inicial" propõe que uma crise febril prolongada (status febril > 30 min) na infância causa dano hipocampal seletivo por excitotoxicidade (glutamato, hipóxia local), com morte neuronal de CA1 e CA3. Esse dano progride ao longo de anos para EHM com gliose e reorganização sináptica, culminando em epilepsia temporal mesial refratária. A latência pode ser de 5–15 anos. Cerca de 30–50% dos pacientes com EHM têm história de crise febril prolongada na infância. Essa progressão justifica o conceito de "período silencioso" antes do início das crises.',
+  },
+  {
+    id: 'em-epi-3',
+    topicId: 'em_sgb',
+    text: 'Paciente com epilepsia temporal mesial refratária por EHM confirmada. Após avaliação pré-cirúrgica completa (SEEG, PET-FDG com hipometabolismo temporal esquerdo, neuropsicologia), qual procedimento cirúrgico apresenta maior taxa de controle de crises?',
+    options: [
+      { id: 'A', text: 'Callosotomia — interrupção da propagação inter-hemisférica das crises' },
+      { id: 'B', text: 'Estimulação do nervo vago (VNS) — redução de 50% das crises em 40% dos casos' },
+      { id: 'C', text: 'Amigdalo-hipocampectomia seletiva ou lobectomia temporal anterior — 60–80% livres de crises (Engel I)' },
+      { id: 'D', text: 'Hemisferectomia funcional — indicada em EHM bilateral' },
+      { id: 'E', text: 'Estimulação cerebral profunda do hipocampo (DBS-HC) — primeira linha em EHM unilateral' },
+    ],
+    correctAnswer: 'C',
+    difficulty: 'medio',
+    tags: ['EHM', 'epilepsia temporal mesial', 'cirurgia', 'amigdalo-hipocampectomia', 'Engel', 'PET'],
+    source: 'Monitoria UNIMA 2026',
+    explanation:
+      'A amigdalo-hipocampectomia seletiva ou a lobectomia temporal anterior são o padrão-ouro cirúrgico para epilepsia temporal mesial por EHM refratária. 60–80% dos pacientes atingem Engel I (livres de crises incapacitantes) — resultado muito superior ao tratamento clínico continuado. O estudo MTLE (2012) demonstrou superioridade da cirurgia vs. otimização medicamentosa em refratários. O PET-FDG mostra hipometabolismo temporal ictal como adjunto de localização. A hemisferectomia é indicada em displasia hemisférica, não em EHM unilateral. A callosotomia atua em crises tônico-clônicas de queda (generalizadas), não em crises focais temporais.',
   },
 ];
