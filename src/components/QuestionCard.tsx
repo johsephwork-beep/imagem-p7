@@ -5,6 +5,8 @@ import type { Question, AnswerOption } from '../types';
 import { DifficultyBadge } from './DifficultyBadge';
 import { TopicBadge } from './TopicBadge';
 import { QuestionImage } from './QuestionImage';
+import { useQuestionImages } from '../hooks/useQuestionImages';
+import { getDriveThumbnailUrl } from '../utils/driveImage';
 
 type CardState = 'idle' | 'selected' | 'revealed';
 
@@ -21,6 +23,11 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
   const [showExplanation, setShowExplanation] = useState(false);
   const [imgZoomed, setImgZoomed] = useState(false);
   const [imgError, setImgError] = useState(false);
+
+  // Imagens do Supabase Storage
+  const { images, loading: imagesLoading } = useQuestionImages(question.id);
+  const imagesWithQuestion = images.filter(img => !img.show_after_answer);
+  const imagesAfterAnswer  = images.filter(img => img.show_after_answer);
 
   function handleSelect(id: AnswerOption) {
     if (state !== 'idle') return;
@@ -93,11 +100,17 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         )}
       </div>
 
-      {/* Imagem da questão (campo image novo) — exibida junto ao enunciado */}
+      {/* Imagens Supabase — exibidas junto ao enunciado */}
+      {!imagesLoading && imagesWithQuestion.map(img => (
+        <QuestionImage key={img.id} url={img.public_url} caption={img.caption} />
+      ))}
+
+      {/* Imagem Drive/URL (campo image legado) — exibida junto ao enunciado */}
       {question.image && !question.image.showAfterAnswer && (
         <QuestionImage
-          type={question.image.type}
-          src={question.image.src}
+          url={question.image.type === 'drive'
+            ? getDriveThumbnailUrl(question.image.src, 'md')
+            : question.image.src}
           caption={question.image.caption}
         />
       )}
@@ -218,15 +231,28 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         </motion.div>
       )}
 
-      {/* Imagem revelada após resposta */}
+      {/* Imagens Supabase reveladas após resposta */}
+      {state === 'revealed' && imagesAfterAnswer.length > 0 && (
+        <div className="mt-4 space-y-1">
+          <p className="text-xs font-medium uppercase tracking-wider text-gray-500">
+            Imagem de referência
+          </p>
+          {imagesAfterAnswer.map(img => (
+            <QuestionImage key={img.id} url={img.public_url} caption={img.caption} />
+          ))}
+        </div>
+      )}
+
+      {/* Imagem Drive/URL (campo image legado) revelada após resposta */}
       {question.image?.showAfterAnswer && state === 'revealed' && (
         <div className="mt-4">
           <p className="mb-1 text-xs font-medium uppercase tracking-wider text-gray-400">
             Imagem de referência
           </p>
           <QuestionImage
-            type={question.image.type}
-            src={question.image.src}
+            url={question.image.type === 'drive'
+              ? getDriveThumbnailUrl(question.image.src, 'md')
+              : question.image.src}
             caption={question.image.caption}
           />
         </div>
