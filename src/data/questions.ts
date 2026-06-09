@@ -199,6 +199,96 @@ export const QUESTIONS: Question[] = [
     explanation:
       'Desvio de linha média ≥ 5 mm com compressão ventricular indica hipertensão intracraniana significativa e possível necessidade de intervenção cirúrgica. A monitorização da PIC e avaliação neurocirúrgica urgente são mandatórias. A punção lombar é contraindicada (risco de herniação). RM não é exame de escolha na emergência aguda de TCE.',
   },
+  {
+    id: 'tce-11',
+    topicId: 'tce',
+    text: 'Lactente de 10 meses trazido ao PS com hipotonia, fontanela tensa e irritabilidade. Sem relato de trauma. TC de crânio: hematomas subdurais bilaterais em diferentes estágios evolutivos. Fundoscopia: hemorragias retinianas bilaterais. Qual é o diagnóstico mais provável e o principal mecanismo fisiopatológico?',
+    options: [
+      { id: 'A', text: 'Meningite bacteriana — inflamação leptomeníngea com HSDs reativas' },
+      { id: 'B', text: 'Síndrome do bebê sacudido — forças de aceleração-desaceleração angular rompem veias em ponte' },
+      { id: 'C', text: 'Aneurisma de veia de Galeno — hipertensão venosa progressiva' },
+      { id: 'D', text: 'Trombocitopenia neonatal — sangramento por diátese hemorrágica' },
+      { id: 'E', text: 'Hidrocefalia congênita — dilatação ventricular com ruptura ependimária' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TCE', 'Shaken Baby', 'pediatria', 'subdural', 'hemorragia retiniana'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Síndrome do Bebê Sacudido (Abusive Head Trauma) resulta de forças de aceleração-desaceleração angular que rompem as veias em ponte (bridging veins), causando HSDs bilaterais. A tríade clássica é: HSD bilateral + hemorragias retinianas + encefalopatia sem trauma evidente. Na TC, HSDs em diferentes densidades indicam diferentes idades dos sangramentos (cronicidade). LAD (lesão axonal difusa) é a principal causa de sequelas neurológicas. Constitui emergência de proteção à criança — notificação obrigatória.',
+  },
+  {
+    id: 'tce-12',
+    topicId: 'tce',
+    text: 'Homem de 43 anos, TCE por acidente de trânsito, ECG 8 na chegada. TC de crânio: aparentemente normal. RM (DWI + SWI): microhemorragias petequiais na junção corticosubcortical, corpo caloso e tronco encefálico, sem lesão focal macroscópica. Qual é o diagnóstico e o grau segundo a classificação de Adams?',
+    options: [
+      { id: 'A', text: 'Contusão cortical focal — Grau I, sem comprometimento do corpo caloso' },
+      { id: 'B', text: 'Lesão Axonal Difusa (LAD) Grau III — junção corticosubcortical + corpo caloso + tronco encefálico' },
+      { id: 'C', text: 'Hematoma epidural subagudo oculto — resolução espontânea' },
+      { id: 'D', text: 'Isquemia de artérias perfurantes — Grau I da TLISS' },
+      { id: 'E', text: 'Hemorragia subaracnóidea traumática isolada — prognóstico favorável' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['TCE', 'LAD', 'lesão axonal difusa', 'SWI', 'RM', 'Adams', 'grau'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Lesão Axonal Difusa (LAD) resulta de forças de cisalhamento e apresenta dissociação clínico-radiológica (ECG baixo com TC normal). A RM-SWI é muito mais sensível que a TC para microhemorragias. Classificação de Adams: Grau I = junção corticosubcortical; Grau II = corpo caloso adicional; Grau III = tronco encefálico (pior prognóstico, mortalidade > 60%). A LAD Grau III em tronco é a principal causa de estado vegetativo persistente pós-TCE.',
+  },
+  {
+    id: 'tce-13',
+    topicId: 'tce',
+    text: 'Homem de 64 anos em uso de varfarina por fibrilação atrial (INR = 3,8) sofre queda da própria altura. ECG 14 → 11 em 2 horas. TC: HSD agudo de ~10 mm com desvio de linha média de 5 mm. Qual a conduta imediata correta em relação à anticoagulação?',
+    options: [
+      { id: 'A', text: 'Manter varfarina e controlar a pressão arterial' },
+      { id: 'B', text: 'Suspender varfarina e administrar Complexo Protrombínico (PCC) 4 fatores + vitamina K IV para reversão imediata do INR' },
+      { id: 'C', text: 'Substituir varfarina por heparina não fracionada em dose terapêutica' },
+      { id: 'D', text: 'Administrar plasma fresco congelado e aguardar cirurgia eletiva' },
+      { id: 'E', text: 'Suspender varfarina sem reversão e aguardar queda espontânea do INR' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TCE', 'anticoagulação', 'varfarina', 'PCC', 'HSD', 'reversão'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Em HSD agudo com deterioração neurológica em paciente anticoagulado, a reversão IMEDIATA é mandatória. O Complexo Protrombínico (PCC — 4 fatores) reverte o INR em minutos, sendo superior ao plasma fresco (lento + sobrecarga volêmica). A vitamina K IV mantém a reversão a longo prazo (age em 6–12h). Heparina é absolutamente contraindicada. A reintrodução da anticoagulação após TCE é decisão caso a caso (geralmente suspensa por 4–8 semanas).',
+  },
+  {
+    id: 'tce-14',
+    topicId: 'tce',
+    text: 'Paciente de 43 anos com TCE grave (ECG 3) após agressão. TC crânio: microhemorragias petequiais no mesencéfalo dorsal e tegmento pontino, cisternas mesencefálicas obliteradas. Qual o mecanismo dessas hemorragias e o prognóstico esperado?',
+    options: [
+      { id: 'A', text: 'Ruptura de aneurisma basilar — prognóstico favorável com coiling' },
+      { id: 'B', text: 'Forças de cisalhamento rompendo vasos de pequeno calibre do tronco — LAD Grau III com mortalidade > 60% e alta chance de estado vegetativo persistente' },
+      { id: 'C', text: 'Contusão cortical occipital — prognóstico bom com fisioterapia precoce' },
+      { id: 'D', text: 'Vasoespasmo traumático com isquemia do tronco — reversível com nimodipina' },
+      { id: 'E', text: 'Trombose da artéria basilar — reperfusão com rtPA' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TCE', 'LAD', 'tronco encefálico', 'prognóstico', 'ECG3', 'cisternas'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'LAD Grau III + ECG 3 + cisternas obliteradas (herniação central) constituem a constelação de pior prognóstico no TCE. A mortalidade em 6 meses ultrapassa 60%, e sobreviventes frequentemente evoluem para estado vegetativo persistente. As microhemorragias no tronco resultam de forças de cisalhamento que rompem pequenos vasos na interface de estruturas com densidades mecânicas diferentes. Na RM-SWI, as lesões do mesencéfalo dorsal e tegmento pontino são marcadores de dano a vias reticulares ascendentes.',
+  },
+  {
+    id: 'tce-15',
+    topicId: 'tce',
+    text: 'Paciente após acidente automobilístico apresenta equimose periorbital bilateral ("olhos de guaxinim"), equimose retroauricular (sinal de Battle) e otorragia. TC de crânio janela óssea: fratura do osso temporal longitudinal com hemossinus esfenoidal. O achado de pneumoencéfalo neste contexto indica:',
+    options: [
+      { id: 'A', text: 'Ruptura de aneurisma da ACM com gás intratecal' },
+      { id: 'B', text: 'Comunicação entre o espaço intracraniano e seio paranasal ou mastoide — risco de meningite ascendente' },
+      { id: 'C', text: 'Necrose de tecido cerebral com produção de gás por bactérias' },
+      { id: 'D', text: 'Embolia gasosa por lesão da carótida interna' },
+      { id: 'E', text: 'Artefato de TC sem significado clínico em fraturas de base' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TCE', 'fratura base crânio', 'pneumoencéfalo', 'sinal Battle', 'olhos de guaxinim', 'meningite'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Olhos de guaxinim = fratura do andar anterior da base (etmoide, frontal) → equimose periorbital. Sinal de Battle = fratura do temporal (mastoide) → equimose retroauricular. O pneumoencéfalo na TC (ar intracraniano) indica comunicação com seio paranasal, células mastoides ou orelha média, confirmando laceração dural associada à fratura de base. Esse achado implica risco de meningite ascendente (S. pneumoniae). Indicação de profilaxia antibiótica é controversa, mas vigilância neurológica é mandatória. Otorragia e rinorragia confirmam o quadro clínico.',
+  },
 
   // ─────────────────────────────────────────
   // AVE — Acidente Vascular Encefálico
@@ -403,6 +493,96 @@ export const QUESTIONS: Question[] = [
     explanation:
       'A TC de crânio sem contraste é o exame de escolha na suspeita de HSA aguda (sensibilidade ~98% nas primeiras 12h). O sangue nas cisternas subaracnóideas, sulcos corticais e fissura inter-hemisférica aparece como hiperdensidade espontânea. A distribuição mais perimesencefálica (cisterna interpeduncular, quadrigeminal) sugere causa não aneurismática e melhor prognóstico. Se TC negativa com forte suspeita clínica, realiza-se punção lombar.',
   },
+  {
+    id: 'ave-11',
+    topicId: 'ave',
+    text: 'Homem de 68 anos, HAS não controlada, apresenta hemiplegia esquerda súbita. TC: hiperdensidade de ~2,5 cm no putâmen direito com extensão para a cápsula interna. Qual a causa fisiopatológica mais provável desta hemorragia e o mecanismo vascular envolvido?',
+    options: [
+      { id: 'A', text: 'Ruptura de aneurisma sacular da ACM na bifurcação' },
+      { id: 'B', text: 'Ruptura de microaneurismas de Charcot-Bouchard nas artérias lenticuloestriadas por lipohialinose hipertensiva' },
+      { id: 'C', text: 'Transformação hemorrágica de infarto embólico por FA' },
+      { id: 'D', text: 'Angiopatia amilóide lobar de depósito cortical' },
+      { id: 'E', text: 'Malformação arteriovenosa ganglio-capsular com ruptura' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['AVE', 'hemorrágico', 'Charcot-Bouchard', 'putâmen', 'HAS', 'fisiopatologia'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Hemorragia hipertensiva resulta da lipohialinose das artérias perfurantes (lenticuloestriadas, tálamoperfurantes, perfurantes da basilar), que enfraquece a parede vascular e favorece microaneurismas de Charcot-Bouchard. A HAS crônica rompe esses vasos de pequeno calibre → hemorragia nos gânglios da base (putâmen = mais frequente), tálamo, cerebelo e ponte. A angiopatia amilóide afeta vasos CORTICAIS (lobares) em idosos. MAV raramente se localiza no putâmen e seria identificada por angio-TC.',
+  },
+  {
+    id: 'ave-12',
+    topicId: 'ave',
+    text: 'Paciente de 57 anos com oclusão da artéria basilar confirmada por angio-TC. Apresenta tetraplegia, anartria, incapacidade de piscar, com preservação da consciência e movimentos verticais dos olhos. Qual a síndrome neurológica presente e o território comprometido?',
+    options: [
+      { id: 'A', text: 'Síndrome de Wallenberg — artéria cerebelar posteroinferior (PICA), lateral bulbar' },
+      { id: 'B', text: 'Síndrome de encarceramento (locked-in) — infarto do tegmento pontino ventral bilateral por oclusão basilar' },
+      { id: 'C', text: 'Síndrome cerebelar pura — artérias cerebelares superiores bilaterais' },
+      { id: 'D', text: 'Coma irresponsivo — isquemia do SARA reticular' },
+      { id: 'E', text: 'Síndrome de Brown-Séquard — artéria espinhal anterior' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['AVE', 'basilar', 'locked-in', 'pons', 'trombectomia', 'emergência'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A síndrome de encarceramento (locked-in) resulta de infarto bilateral do tegmento pontino VENTRAL por oclusão basilar, comprometendo vias piramidal e corticobulbar. O paciente está consciente (SARA preservado no tegmento dorsal) mas completamente paralisado e anártrico. Preservam-se movimentos verticais dos olhos (núcleo do III par no mesencéfalo). A reperfusão (trombectomia ou trombólise) deve ser tentada mesmo além da janela habitual — sem ela, a mortalidade por oclusão basilar ultrapassa 90%.',
+  },
+  {
+    id: 'ave-13',
+    topicId: 'ave',
+    text: 'Na TC de crânio sem contraste nas primeiras 6 horas de AVCi por oclusão da ACM, quais são os sinais precoces de isquemia que precedem a hipodensidade macroscópica?',
+    options: [
+      { id: 'A', text: 'Hiperdensidade cortical difusa e calcificação ganglio-capsular' },
+      { id: 'B', text: 'Apagamento da faixa insular (insular ribbon sign), perda da diferenciação do núcleo lentiforme e sinal da ACM hiperdensa' },
+      { id: 'C', text: 'Hipodensidade fronto-parietal difusa com colapso ventricular' },
+      { id: 'D', text: 'Edema perilesional em "dedo de luva" e realce meníngeo' },
+      { id: 'E', text: 'Calcificação do núcleo lentiforme e atrofia cortical local' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TC', 'AVE', 'isquemia precoce', 'insular ribbon', 'ACM', 'ASPECTS'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Sinais precoces de isquemia por AVCi agudo na TC (primeiras 6h), antes da hipodensidade franca: (1) Sinal da ACM hiperdensa — trombo intraluminal visível. (2) Insular ribbon sign — apagamento do contraste córtex-SB na ínsula, área mais sensível por ser irrigada exclusivamente por ramos da ACM (sem colaterais). (3) Apagamento do núcleo lentiforme — edema citotóxico precoce nos gânglios da base. Esses sinais compõem regiões avaliadas no ASPECTS e orientam decisão terapêutica.',
+  },
+  {
+    id: 'ave-14',
+    topicId: 'ave',
+    text: 'Paciente de 61 anos com FA e prótese valvar mitral mecânica apresenta ao acordar hemiparesia direita e afasia. RM: DWI+ / FLAIR- em múltiplos territórios vasculares (frontal esquerda, parietal esquerda e cerebelar direita simultaneamente). Qual mecanismo etiológico do AVC esse padrão de imagem favorece?',
+    options: [
+      { id: 'A', text: 'Lacunar — doença de pequenos vasos com infartos múltiplos profundos' },
+      { id: 'B', text: 'Cardioembólico — êmbolos de fonte cardíaca atingindo múltiplos territórios vasculares simultaneamente' },
+      { id: 'C', text: 'Aterotrobótico — placa na carótida interna com embolização ipsilateral' },
+      { id: 'D', text: 'Hemodinâmico — hipoperfusão em zonas de fronteira bilateral' },
+      { id: 'E', text: 'Criptogênico — AVC de causa indeterminada sem padrão definido' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['AVE', 'cardioembólico', 'FA', 'prótese valvar', 'RM', 'padrão múltiplo'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O padrão de múltiplos infartos em diferentes territórios arteriais (circulações anterior e posterior, bilateral) é patognomônico de fonte cardioembólica: êmbolos oriundos do coração ou aorta proximal podem alcançar qualquer artéria cerebral simultaneamente. FA + prótese valvar mecânica são fatores de altíssimo risco cardioembólico (CHA₂DS₂-VASc elevado). O aterotrobótico causa infarto em território único. AVCs lacunares são únicos e < 15 mm. DWI+/FLAIR- confirma wake-up stroke dentro da janela para trombólise.',
+  },
+  {
+    id: 'ave-15',
+    topicId: 'ave',
+    text: 'Pelo protocolo DEFUSE-3, qual é o critério de mismatch na TC/RM de perfusão que define o paciente como candidato à trombectomia mecânica entre 6 e 16 horas do início dos sintomas?',
+    options: [
+      { id: 'A', text: 'Penumbra > 5 mL com qualquer tamanho de núcleo' },
+      { id: 'B', text: 'Volume hipoperfundido (Tmax > 6s) / volume do núcleo (CBF < 30%) ≥ 1,8 E penumbra absoluta ≥ 15 mL E núcleo < 70 mL' },
+      { id: 'C', text: 'ASPECTS ≥ 8 com oclusão de grande vaso documentada' },
+      { id: 'D', text: 'DWI+ em menos de 1/3 do território da ACM sem critério de perfusão' },
+      { id: 'E', text: 'Mismatch DWI/FLAIR com qualquer volume de penumbra residual' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['AVE', 'DEFUSE-3', 'trombectomia', 'perfusão', 'mismatch', 'janela tardia'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O estudo DEFUSE-3 (NEJM 2018) demonstrou benefício da trombectomia mecânica de 6–16h em pacientes com: (1) oclusão de ACI ou ACM proximal; (2) perfil de mismatch: volume hipoperfundido (Tmax > 6s) / volume do núcleo (CBF < 30%) ≥ 1,8 com penumbra ≥ 15 mL; (3) núcleo infartado < 70 mL. O estudo DAWN (6–24h) usou critérios clínico-radiológicos similares. Ambos transformaram a prática, estendendo a janela da trombectomia para pacientes com penumbra isquêmica salvável.',
+  },
 
   // ─────────────────────────────────────────
   // CEFALEIA & HIC
@@ -600,6 +780,96 @@ export const QUESTIONS: Question[] = [
     explanation:
       'A HPN de Hakim-Adams cursa com a tríade "wet, wacky, wobbly": incontinência urinária, demência subcortical e distúrbio da marcha (marcha magnética, de pequenos passos). A pressão do LCR é normal (10–15 mmHg), mas os ventrículos dilatam-se. O achado radiológico chave é a dilatação ventricular desproporcional ao grau de atrofia cortical (DESH — Disproportionately Enlarged Subarachnoid-space Hydrocephalus): fissura sylviana e cisternas basais alargadas com sulcos vertex apertados. Teste com drenagem de LCR confirma candidatos à derivação.',
   },
+  {
+    id: 'cefaleia-11',
+    topicId: 'cefaleia',
+    text: 'Mulher de 29 anos em uso de anticoncepcional oral com cefaleia progressiva há 5 dias, déficit visual, confusão mental e crise convulsiva. TC com contraste: hiperdensidade no seio sagital superior com falha de enchimento central em forma triangular — "sinal do delta vazio". Qual o diagnóstico e a terapêutica de primeira linha, mesmo na presença de hemorragia?',
+    options: [
+      { id: 'A', text: 'HSA por aneurisma roto — coiling endovascular urgente' },
+      { id: 'B', text: 'Trombose venosa cerebral (TVC) — heparina plena, mesmo na presença de hemorragia intracraniana' },
+      { id: 'C', text: 'Meningite viral — aciclovir IV e dexametasona' },
+      { id: 'D', text: 'RCVS — nimodipina e analgesia' },
+      { id: 'E', text: 'HIC idiopática — acetazolamida e derivação lomboperitoneal' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['TVC', 'trombose venosa cerebral', 'sinal delta vazio', 'anticoagulação', 'ACO'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O "sinal do delta vazio" (empty delta sign) na TC com contraste — realce dural triangular ao redor do trombo hipodenso no seio sagital superior — é altamente específico de TVC. A TVC ocorre tipicamente em mulheres jovens (ACO, gestação, puerpério). O tratamento de PRIMEIRA LINHA é anticoagulação com heparina plena, mesmo na presença de hemorragia intracraniana (paradoxalmente, a anticoagulação reduz o infarto venoso e a expansão hemorrágica). A venografia por RM ou TC confirma ausência de fluxo venoso e é o padrão-ouro.',
+  },
+  {
+    id: 'cefaleia-12',
+    topicId: 'cefaleia',
+    text: 'Na TC de crânio SEM contraste de paciente com suspeita de trombose venosa cerebral do seio sagital superior, qual sinal pode ser identificado e o que representa fisiopatologicamente?',
+    options: [
+      { id: 'A', text: '"Sinal da fita" — edema meníngeo difuso ao longo das convexidades parietais' },
+      { id: 'B', text: '"Sinal da corda" (cord sign) — hiperdensidade espontânea no trajeto do seio trombosado, representando sangue coagulado intraluminal' },
+      { id: 'C', text: '"Sinal da ACM hiperdensa" — trombo arterial ipsilateral concomitante' },
+      { id: 'D', text: '"Delta cheio" — ausência de falha de enchimento venoso' },
+      { id: 'E', text: '"Sinal do duplo anel" — hematoma epidural subagudo bilateral' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['TVC', 'trombose venosa cerebral', 'sinal da corda', 'TC', 'diagnóstico'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O "sinal da corda" (cord sign) na TC sem contraste corresponde à hiperdensidade espontânea no trajeto de um seio venoso ou veia cortical, causada pelo sangue coagulado (trombo hiperdenso 35–80 UH). É observado no seio sagital superior, seio transverso ou veias corticais. Sensibilidade moderada (~30%) mas alta especificidade. Combinado com o sinal do delta vazio (com contraste), permite diagnóstico de TVC. A venografia por RM (TOF ou contraste) é o padrão-ouro mostrando ausência de sinal de fluxo no seio trombosado.',
+  },
+  {
+    id: 'cefaleia-13',
+    topicId: 'cefaleia',
+    text: 'Homem de 55 anos com histórico de tumor pulmonar de células pequenas evolui com cefaleia intensa, diplopia e vômitos em jato. TC de crânio com contraste: lesão cerebelar com realce nodular intenso, edema perilesional extenso e dilatação ventricular supra e infratentorial. Qual o diagnóstico e o mecanismo da hidrocefalia?',
+    options: [
+      { id: 'A', text: 'Hematoma cerebelar espontâneo com hidrocefalia comunicante por hemossiderose' },
+      { id: 'B', text: 'Metástase cerebelar comprimindo o 4º ventrículo — hidrocefalia obstrutiva (não comunicante) com dilatação dos ventrículos a montante' },
+      { id: 'C', text: 'Abscesso cerebelar com edema difuso e hidrocefalia tóxica' },
+      { id: 'D', text: 'AVC cerebelar hemorrágico com hidrocefalia ex-vacuo' },
+      { id: 'E', text: 'Meduloblastoma com carcinomatose leptomeníngea e hidrocefalia comunicante' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['hidrocefalia obstrutiva', 'metástase', 'cerebelo', 'cefaleia', 'TC', 'HIC'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Metástases no cerebelo ou tronco podem comprimir o aqueduto de Sylvius ou o 4º ventrículo, causando hidrocefalia obstrutiva (não comunicante): dilatação ventricular a MONTANTE (3º e laterais) com 4º ventrículo normal ou pequeno. Carcinoma de pulmão de pequenas células é uma das causas mais comuns de metástases cerebrais sintomáticas. Na TC com contraste, metástases mostram realce em anel ou nodular com edema vasogênico perilesional extenso. O tratamento inicial pode incluir derivação ventricular para alívio urgente da HIC, seguido de radioterapia cerebral total ou radiocirurgia.',
+  },
+  {
+    id: 'cefaleia-14',
+    topicId: 'cefaleia',
+    text: 'Qual é a Escala de Fisher modificada para HSA e sua relevância clínica para predizer risco de vasoespasmo?',
+    options: [
+      { id: 'A', text: 'Grau 1: TC normal; Grau 2: HSA fina (< 1 mm); Grau 3: coágulo cisternal ou HSA espessa; Grau 4: HSA + HIV ou HSD — Grau 1 tem maior risco de vasoespasmo' },
+      { id: 'B', text: 'Grau 1: sem sangue na TC; Grau 2: HSA difusa fina; Grau 3: coágulo cisternal ou HSA espessa (≥ 1 mm); Grau 4: HSA com componente intraventricular ou intraparenquimatoso — Graus 3 e 4 com risco de vasoespasmo ~40%' },
+      { id: 'C', text: 'Grau I–V baseado apenas no volume hemorrágico total em mL na TC' },
+      { id: 'D', text: 'Escala de 1–5 correlacionando apenas o ECG de Glasgow com o volume da HSA' },
+      { id: 'E', text: 'Baseia-se na localização do aneurisma e no calibre do vaso irrigado' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['HSA', 'Fisher', 'vasoespasmo', 'TC', 'prognóstico', 'nimodipina'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Escala de Fisher modificada (Frontera) prediz risco de vasoespasmo sintomático pós-HSA: Grau 1 = sem sangue (baixo risco); Grau 2 = HSA difusa fina < 1 mm (baixo risco); Grau 3 = coágulo cisternal ou HSA ≥ 1 mm (alto risco ~40%); Grau 4 = qualquer HSA + componente intraventricular ou intraparenquimatoso (alto risco). O vasoespasmo é a principal causa de morbidade tardia (dias 4–14, pico dias 7–10). Nimodipina oral é profilática para todos os graus. Monitorização com Doppler transcraniano e angio-TC nas pioras clínicas.',
+  },
+  {
+    id: 'cefaleia-15',
+    topicId: 'cefaleia',
+    text: 'Jovem de 22 anos com proptose unilateral dolorosa, edema palpebral, quemose, febre e oftalmoplegia após sinusite etmoidal mal tratada. RM com contraste: realce heterogêneo e falha de enchimento no seio cavernoso com extensão orbitária. Qual o diagnóstico e sua principal complicação neurológica?',
+    options: [
+      { id: 'A', text: 'Celulite orbitária pré-septal — sem comprometimento intraorbitário ou intracraniano' },
+      { id: 'B', text: 'Trombose séptica do seio cavernoso — risco de meningite, abscesso cerebral e trombose de seios vizinhos' },
+      { id: 'C', text: 'Meningioma do seio cavernoso — crescimento lento sem sinais infecciosos' },
+      { id: 'D', text: 'Pseudotumor orbitário (IgG4) — responde a corticoide' },
+      { id: 'E', text: 'Granulomatose com poliangiite (Wegener) — biópsia confirmatória' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['seio cavernoso', 'trombose séptica', 'RM', 'sinusite', 'cefaleia', 'oftalmoplegia'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A trombose séptica do seio cavernoso é complicação grave (~20% mortalidade) geralmente de sinusite etmoidal ou esfenoidal, ou infecção facial (zona perigosa da face). Clínica: proptose, quemose, oftalmoplegia (III, IV, VI pares no seio cavernoso), dor retroorbitária, febre alta. Na RM com gadolínio: realce heterogêneo/falha no seio cavernoso, extensão orbitária, trombose de seios adjacentes. Complicações: meningite, abscesso cerebral, trombose do seio sagital. Tratamento: antibióticos IV de amplo espectro + anticoagulação (controversa mas usada na maioria dos centros).',
+  },
 
   // ─────────────────────────────────────────
   // PARKINSON
@@ -789,6 +1059,96 @@ export const QUESTIONS: Question[] = [
     source: 'Monitoria UNIMA 2026',
     explanation:
       'Na AMS-P, o depósito de ferro no putâmen posterior e a gliose causam: hipossinal putaminal em T2 (> hipossinal normal) e uma fenda hiperintensa lateral em T2 (putaminal slit sign), causada pela gliose da borda lateral do putâmen. Na DP, o putâmen tem sinal normal. Outros achados de AMS: atrofia putaminal, hiperssinal em T2 no pedúnculo cerebelar médio, hipossinal putaminal > hipossinal do globo pálido. A perda do swallow tail é específica de DP e não está presente na AMS.',
+  },
+  {
+    id: 'parkinson-11',
+    topicId: 'parkinson',
+    text: 'Homem de 67 anos com tremor unilateral direito, rigidez assimétrica marcante, apraxia ideomotora da mão direita e "fenômeno da mão alienígena" (alien hand syndrome). RM: atrofia cortical assimétrica predominantemente frontoparietal esquerda. Qual a síndrome parkinsoniana mais provável?',
+    options: [
+      { id: 'A', text: 'Doença de Parkinson idiopática — assimetria clínica esperada' },
+      { id: 'B', text: 'Degeneração Corticobasal (DCB) — taupatia com síndrome corticobasal, atrofia assimétrica frontoparietal contralateral ao lado clínico' },
+      { id: 'C', text: 'Paralisia Supranuclear Progressiva (PSP) — geralmente simétrica' },
+      { id: 'D', text: 'Atrofia de Múltiplos Sistemas-P (AMS-P) — afeta putâmen bilateralmente' },
+      { id: 'E', text: 'Demência com Corpos de Lewy — bilateral e simétrica com alucinações visuais' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['Parkinson', 'DCB', 'degeneração corticobasal', 'atrofia assimétrica', 'alien hand', 'taupatia'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Degeneração Corticobasal (DCB) é uma taupatia que causa síndrome corticobasal: parkinsonismo assimétrico + apraxia + fenômeno da mão alienígena + distonia + mioclonia. Na RM, a atrofia cortical é marcadamente assimétrica, predominando no lobo frontoparietal CONTRALATERAL ao lado clínico mais afetado (ex.: mão direita afetada = atrofia frontoparietal esquerda). FDG-PET mostra hipometabolismo frontoparietal assimétrico. Não responde à levodopa — diferença fundamental da DP. O diagnóstico definitivo requer neuropatologia.',
+  },
+  {
+    id: 'parkinson-12',
+    topicId: 'parkinson',
+    text: 'Adolescente de 17 anos com movimentos involuntários coreiformes, instabilidade emocional e declínio cognitivo, com pai afetado pela mesma doença. TC/RM de crânio: atrofia bilateral dos núcleos caudados com "aspecto quadrado" dos cornos frontais dos ventrículos laterais. Qual o diagnóstico e o mecanismo genético?',
+    options: [
+      { id: 'A', text: 'Coreia de Sydenham pós-estreptocócica — infecção recente por estreptococo' },
+      { id: 'B', text: 'Doença de Huntington — expansão do trinucleotídeo CAG no gene HTT, herança autossômica dominante' },
+      { id: 'C', text: 'Doença de Wilson — depósito de cobre nos gânglios da base' },
+      { id: 'D', text: 'Neuroacantocitose — acantócitos no sangue periférico' },
+      { id: 'E', text: 'Atrofia de Múltiplos Sistemas cerebelar (AMS-C)' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['Parkinson', 'Huntington', 'caudado', 'coreia', 'TC', 'aspecto quadrado', 'CAG'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Doença de Huntington é causada por expansão do trinucleotídeo CAG (> 36 repetições) no gene HTT (cromossomo 4), com herança autossômica dominante e antecipação genética. A degeneração seletiva dos neurônios espinhosos médios do núcleo caudado e putâmen causa o "aspecto quadrado" dos cornos frontais: o caudado normal forma uma convexidade medial que desaparece. FDG-PET mostra hipometabolismo do estriado precocemente, antes das alterações estruturais. Início usual: 30–50 anos; forma juvenil < 20 anos (geralmente paterna, CAG muito elevado).',
+  },
+  {
+    id: 'parkinson-13',
+    topicId: 'parkinson',
+    text: 'Mulher de 55 anos com parkinsonismo bilateral simétrico sem tremor, hipotensão ortostática grave e disfunção autonômica severa. RM T2: hipossinal putaminal posterior bilateral com fenda hiperintensa lateral (putaminal slit sign). Qual o diagnóstico?',
+    options: [
+      { id: 'A', text: 'PSP — sinal do beija-flor no mesencéfalo' },
+      { id: 'B', text: 'AMS-P (Atrofia de Múltiplos Sistemas parkinsoniana) — putaminal slit sign + hipossinal putaminal T2 + disfunção autonômica grave' },
+      { id: 'C', text: 'AMS-C — hot cross bun na ponte, não no putâmen' },
+      { id: 'D', text: 'DP idiopática — putâmen com sinal normal na RM' },
+      { id: 'E', text: 'DCB — atrofia frontoparietal assimétrica' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['RM', 'Parkinson', 'AMS-P', 'putaminal slit', 'hipossinal putaminal', 'autonômico'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Na AMS-P, a degeneração do putâmen posterior causa: hipossinal em T2 (depósito de ferro + gliose) e fenda hiperintensa lateral — "putaminal slit sign". A disfunção autonômica grave (hipotensão ortostática, incontinência, disfunção erétil) diferencia AMS da DP. A AMS-C tem hot cross bun na ponte. A resposta à levodopa na AMS-P é transitória/parcial vs. DP (excelente resposta). DaTscan está alterado na AMS e na DP (ambas nigroestriatais), mas o putaminal slit distingue AMS-P. Sobrevida média: 8–10 anos.',
+  },
+  {
+    id: 'parkinson-14',
+    topicId: 'parkinson',
+    text: 'Idoso de 72 anos com marcha a pequenos passos, instabilidade postural e quedas desde o início, sem tremor em repouso. Mínima resposta à levodopa em dose-teste. RM: leucoaraiose periventricular confluente e múltiplas lacunas nos gânglios da base. DaTscan: normal. Qual o diagnóstico mais provável?',
+    options: [
+      { id: 'A', text: 'Doença de Parkinson idiopática — início assimétrico típico' },
+      { id: 'B', text: 'Parkinsonismo vascular — lesões vasculares subcorticais múltiplas com DaTscan normal' },
+      { id: 'C', text: 'PSP — sinal do beija-flor com DaTscan alterado' },
+      { id: 'D', text: 'HPN (hidrocefalia de pressão normal) — tríade de Hakim com ventrículos dilatados' },
+      { id: 'E', text: 'DCB — atrofia frontoparietal assimétrica na RM' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['Parkinson', 'parkinsonismo vascular', 'leucoaraiose', 'DaTscan normal', 'RM'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O parkinsonismo vascular resulta de múltiplos infartos lacunares nos gânglios da base e substância branca profunda, comprometendo os circuitos basais. Características: predomínio de sintomas axiais (marcha, equilíbrio) > membros, início insidioso ou em degraus, mínima resposta à levodopa. Na RM: leucoaraiose (FLAIR/T2 periventricular confluente), lacunas no putâmen, tálamo e cápsula interna. O DaTscan NORMAL é o achado-chave — diferencia do parkinsonismo degenerativo (DP, PSP, AMS), que tem captação reduzida. Segunda causa mais comum de parkinsonismo após a DP.',
+  },
+  {
+    id: 'parkinson-15',
+    topicId: 'parkinson',
+    text: 'Na RM sagital de encéfalo da PSP (Paralisia Supranuclear Progressiva), o "sinal do beija-flor" resulta de que alteração e qual índice quantitativo o confirma?',
+    options: [
+      { id: 'A', text: 'Dilatação do mesencéfalo com ponte preservada — relação M/P > 0,8' },
+      { id: 'B', text: 'Atrofia seletiva do mesencéfalo com relativa preservação da ponte — diâmetro AP do mesencéfalo < 14 mm e razão área mesencéfalo/área ponte < 0,52' },
+      { id: 'C', text: 'Atrofia simétrica de todo o tronco — mesencéfalo/ponte = 1,0 na PSP' },
+      { id: 'D', text: 'Atrofia isolada do dorso do mesencéfalo com sinal do olho do tigre' },
+      { id: 'E', text: 'Atrofia da ponte preservando o mesencéfalo — padrão inverso ao da PSP' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['RM', 'PSP', 'Parkinson', 'sinal beija-flor', 'mesencéfalo', 'MRPI', 'índice'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'Na PSP, a atrofia seletiva do mesencéfalo (< 14 mm AP) com relativa preservação da ponte cria o "sinal do beija-flor" sagital: mesencéfalo = cabeça pequena do pássaro, ponte = corpo. No axial, o "sinal do Mickey Mouse". A razão área mesencéfalo/área ponte < 0,52 e o MRPI (MR Parkinsonism Index = [ponte/mesencéfalo] × [PCM/PCS]) > 13,55 têm alta especificidade para PSP. A AMS-C mostra o padrão oposto: atrofia predominante da ponte (hot cross bun) preservando relativamente o mesencéfalo. Ambas se distinguem da DP (tronco normal).',
   },
 
   // ─────────────────────────────────────────
@@ -1034,5 +1394,95 @@ export const QUESTIONS: Question[] = [
     source: 'QUIZ CVCC / Monitoria UNIMA 2026',
     explanation:
       'O "central vein sign" (CVS) é a visualização de uma veia central dentro das lesões de substância branca em sequências de alta resolução (EPI-GRE, SWI, FLAIR*). Está presente em >80% das lesões de EM vs. <20% das lesões de outras causas (microangiopatia, Lyme, NMOSD, vasculite). Reflete a patogênese perivenular da EM. Critério proposto: ≥ 40% das lesões com CVS ou ≥ 3 lesões CVS positivas podem substituir requisitos de localização em McDonald para diagnóstico. Ainda em validação clínica.',
+  },
+  {
+    id: 'em-14',
+    topicId: 'em_sgb',
+    text: 'Jovem de 23 anos com crises epilépticas focais refratárias a dois antiepilépticos. RM de 3T protocolo epilepsia: hipossinal T1 e hipersinal T2/FLAIR no hipocampo esquerdo com redução volumétrica evidente e perda da laminação interna em relação ao hipocampo direito. Qual o diagnóstico e o potencial tratamento cirúrgico?',
+    options: [
+      { id: 'A', text: 'Glioma de baixo grau hipocampal — quimioterapia + radioterapia' },
+      { id: 'B', text: 'Esclerose hipocampal — causa mais comum de epilepsia temporal mesial refratária, com potencial cirúrgico (amigdalo-hipocampectomia)' },
+      { id: 'C', text: 'Encefalite autoimune anti-NMDA — imunossupressão com corticoide + IVIG' },
+      { id: 'D', text: 'MAV temporal — embolização endovascular' },
+      { id: 'E', text: 'Herpes encefalite residual — antiviral de manutenção' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['RM', 'esclerose hipocampal', 'epilepsia', 'temporal mesial', 'cirurgia', '3T'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A esclerose hipocampal (EH) é a causa mais comum de epilepsia temporal mesial refratária. Na RM de 3T protocolo epilepsia: hipossinal T1, hipersinal T2/FLAIR no hipocampo com atrofia (redução volumétrica > 20% vs. contralateral) e perda da laminação interna (apagamento da estrutura laminar de CA1-CA4). Causa: frequentemente crise febril prolongada na infância ("lesão inicial"). 60–80% dos casos são cirurgicamente tratáveis: amigdalo-hipocampectomia seletiva ou lobectomia temporal anterior. PET-FDG mostra hipometabolismo temporal ictal como adjunto.',
+  },
+  {
+    id: 'em-15',
+    topicId: 'em_sgb',
+    text: 'Imigrante de 28 anos de área rural endêmica, com crises convulsivas focais de início recente. RM de encéfalo: lesão cística cortical com nódulo mural hiperdenso em T1 interno (escólex) e edema perilesional. TC: calcificação nodular em outra lesão. Qual o diagnóstico e o estágio da lesão cística?',
+    options: [
+      { id: 'A', text: 'Glioblastoma com necrose central — estágio avançado' },
+      { id: 'B', text: 'Neurocisticercose — estágio vesicular com escólex viável (fase ativa)' },
+      { id: 'C', text: 'Abscesso piogênico — parede espessa com realce em anel' },
+      { id: 'D', text: 'Metástase única — sem escólex, núcleo necrótico' },
+      { id: 'E', text: 'Cavernoma — popcorn ball com hemossiderina e SWI blooming' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['neurocisticercose', 'RM', 'escólex', 'cisticercose', 'epilepsia', 'estágios'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A neurocisticercose (Taenia solium) é a parasitose cerebral mais comum no Brasil. Estágios na RM: (1) Vesicular — cisto límpido com escólex hipersinal T1 ("grão de arroz"), sem edema, fase ativa viável; (2) Coloidal vesicular — cisto com escólex, parede espessa, realce em anel, edema significativo (mais epileptogênico); (3) Granular nodular — nódulo sólido, calcificação inicial; (4) Nodular calcificado — calcificação hiperdensa na TC, sem edema. A coexistência de lesões em diferentes estágios é característica. Tratamento: albendazol/praziquantel + corticoide peri-tratamento.',
+  },
+  {
+    id: 'em-16',
+    topicId: 'em_sgb',
+    text: 'Mulher de 35 anos com crises epilépticas e cefaleia há 2 anos. RM: lesão cortical/subcortical com aspecto heterogêneo "em bola de pipoca" (popcorn ball) em T2, halo de hipossinal por hemossiderina. SWI: intensa queda de sinal ("blooming effect"). Sem realce após gadolínio. Qual o diagnóstico e a utilidade da SWI?',
+    options: [
+      { id: 'A', text: 'Metástase cerebral — realce em anel após gadolínio' },
+      { id: 'B', text: 'Cavernoma (malformação cavernosa) — angiograficamente oculto, SWI amplia o sinal de hemossiderina tornando lesões crípticas visíveis' },
+      { id: 'C', text: 'Glioma de baixo grau — hipossinal T1 e T2 sem halo' },
+      { id: 'D', text: 'Neurocisticercose calcificada — nodular hiperdensa na TC' },
+      { id: 'E', text: 'Meningioma cortical — realce intenso homogêneo e dural tail' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['cavernoma', 'RM', 'popcorn ball', 'SWI', 'blooming', 'hemossiderina', 'epilepsia'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'O cavernoma (malformação cavernosa) é uma lesão vascular angiograficamente oculta — vasos de baixo fluxo, não visíveis na angiografia. RM: aspecto heterogêneo "em bola de pipoca" por múltiplos ciclos de hemorragia em diferentes estágios com halo periférico de hemossiderina em T2. SWI: o "blooming effect" amplifica o sinal da hemossiderina, tornando lesões crípticas visíveis — detecta cavernomas muito pequenos não visíveis no FLAIR/T2 convencional. Sem realce por gadolínio (sem ruptura da BHE em repouso). Causa comum de epilepsia focal. Cirurgia se epilepsia refratária ou sangramento recidivante.',
+  },
+  {
+    id: 'em-17',
+    topicId: 'em_sgb',
+    text: 'Criança de 8 anos com epilepsia focal refratária ao tratamento. RM protocolo epilepsia de 3T: área de córtex espessado com apagamento da junção córtex-substância branca e hipersinal FLAIR em cone se estendendo do córtex até a superfície ventricular ("sinal transmantle"). Qual o diagnóstico e sua importância cirúrgica?',
+    options: [
+      { id: 'A', text: 'Polimicrogiria — múltiplas microgirias no opérculo rolândico' },
+      { id: 'B', text: 'Displasia Cortical Focal Tipo II (DCF IIb) — sinal transmantle é altamente específico; ressecção cirúrgica guiada pode ser curativa' },
+      { id: 'C', text: 'Hemimegalencefalia — toda a hemisfério aumentado' },
+      { id: 'D', text: 'Heterotopia laminar — duplo córtex em banda na SB' },
+      { id: 'E', text: 'Lisencefalia clássica — córtex liso espessado global' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'dificil',
+    tags: ['displasia cortical', 'DCF', 'sinal transmantle', 'RM 3T', 'epilepsia', 'cirurgia', 'malformação'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Displasia Cortical Focal (DCF) é a malformação cortical mais associada à epilepsia refratária cirurgicamente tratável. Na RM de 3T, a DCF Tipo IIb (com células balão) apresenta: (1) espessamento e irregularidade cortical, (2) apagamento da junção córtex-SB, (3) hipersinal FLAIR na SB subjacente, (4) "sinal transmantle" — hipersinal em cone/funil da SB do córtex até o ventrículo (altamente específico de DCF IIb). A RM de 1,5T frequentemente perde DCF leve. Cirurgia com SEEG após mapeamento é curativa em 50–70% dos casos com ressecção completa da zona epileptogênica.',
+  },
+  {
+    id: 'em-18',
+    topicId: 'em_sgb',
+    text: 'Paciente de 42 anos HIV+ com CD4 = 50 céls/mm³, evolui com déficit cognitivo progressivo e hemiparesia. RM FLAIR: extensas lesões hiperintensas confluentes na substância branca bilateral parieto-occipital, sem efeito de massa, sem realce com gadolínio. DWI: restrição nas bordas periféricas das lesões. Qual o diagnóstico e o agente etiológico?',
+    options: [
+      { id: 'A', text: 'Toxoplasmose cerebral — múltiplos nódulos com realce em anel e efeito de massa' },
+      { id: 'B', text: 'Leucoencefalopatia Multifocal Progressiva (LMP) — reativação do vírus JC em imunossuprimido grave' },
+      { id: 'C', text: 'Linfoma cerebral primário do SNC — realce homogêneo periventricular no HIV' },
+      { id: 'D', text: 'Criptococose — dilatação dos espaços de Virchow-Robin nos gânglios da base' },
+      { id: 'E', text: 'Encefalopatia do HIV — atrofia cortical difusa simétrica precoce' },
+    ],
+    correctAnswer: 'B',
+    difficulty: 'medio',
+    tags: ['LMP', 'leucoencefalopatia', 'JC vírus', 'HIV', 'imunossupressão', 'RM', 'CD4'],
+    source: 'Resumão IMAGEM UC 21 / UNIMA 2026',
+    explanation:
+      'A Leucoencefalopatia Multifocal Progressiva (LMP) resulta da reativação do vírus JC em imunossuprimidos graves (CD4 < 100/mm³ no HIV, ou uso de natalizumabe/rituximabe). RM: lesões desmielinizantes confluentes na SB parieto-occipital, sem efeito de massa, SEM realce (ausência de inflamação = BHE íntegra). DWI: restrição periférica nas bordas ativas ("lesões em arco"). Diferencia-se da EM: sem bandas oligoclonais, CD4 < 100, sem realce por Gd. Tratamento: HAART (restaurar imunidade); a IRIS (síndrome inflamatória de reconstituição) pode paradoxalmente piorar clinicamente antes de melhorar.',
   },
 ];
