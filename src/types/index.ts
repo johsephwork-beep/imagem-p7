@@ -25,6 +25,9 @@ export interface Question {
   options: {
     id: AnswerOption;
     text: string;
+    /** Justificativa da alternativa — por que está certa ou por que está errada.
+     *  Exibida após a resposta, no bloco de revisão alternativa a alternativa. */
+    rationale?: string;
   }[];
   correctAnswer: AnswerOption;
   explanation?: string;

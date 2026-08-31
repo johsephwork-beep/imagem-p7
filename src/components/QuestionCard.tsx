@@ -21,8 +21,12 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
   const [selected, setSelected] = useState<AnswerOption | null>(null);
   const [state, setState] = useState<CardState>('idle');
   const [showExplanation, setShowExplanation] = useState(false);
+  const [showRationales, setShowRationales] = useState(false);
   const [imgZoomed, setImgZoomed] = useState(false);
   const [imgError, setImgError] = useState(false);
+
+  // Revisão alternativa a alternativa — só existe se a questão trouxer justificativas
+  const hasRationales = question.options.some((o) => o.rationale);
 
   // Imagens do Supabase Storage
   const { images, loading: imagesLoading } = useQuestionImages(question.id);
@@ -224,6 +228,76 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
               >
                 <div className="bg-brand-surface border border-brand-accent/20 rounded-xl p-4 text-brand-text/90 text-sm leading-relaxed">
                   {question.explanation}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      )}
+
+      {/* Revisão alternativa a alternativa — justificativa da correta e negativa das erradas */}
+      {state === 'revealed' && hasRationales && (
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}>
+          <button
+            onClick={() => setShowRationales((v) => !v)}
+            className="flex items-center gap-2 text-brand-teal text-sm font-medium w-full py-2"
+          >
+            <ChevronDown
+              size={16}
+              className={`transition-transform ${showRationales ? 'rotate-180' : ''}`}
+            />
+            {showRationales ? 'Ocultar revisão das alternativas' : 'Revisar alternativa por alternativa'}
+          </button>
+          <AnimatePresence>
+            {showRationales && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-2">
+                  {question.options.map((opt) => {
+                    const isCorrect = opt.id === question.correctAnswer;
+                    return (
+                      <div
+                        key={opt.id}
+                        className="rounded-xl border p-3 bg-brand-surface"
+                        style={{
+                          borderColor: isCorrect
+                            ? 'rgba(20,184,166,0.35)'
+                            : 'rgba(239,68,68,0.22)',
+                        }}
+                      >
+                        <div className="flex items-start gap-2">
+                          <span
+                            className={`w-5 h-5 mt-0.5 rounded-full flex-shrink-0 flex items-center justify-center text-[11px] font-mono font-semibold ${
+                              isCorrect
+                                ? 'bg-brand-teal/15 text-brand-teal'
+                                : 'bg-brand-red/10 text-brand-red'
+                            }`}
+                          >
+                            {opt.id}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <p
+                              className={`text-xs font-semibold uppercase tracking-wider ${
+                                isCorrect ? 'text-brand-teal' : 'text-brand-red'
+                              }`}
+                            >
+                              {isCorrect ? 'Correta' : 'Incorreta'}
+                            </p>
+                            {opt.rationale && (
+                              <p className="text-brand-text/90 text-sm leading-relaxed mt-1">
+                                {opt.rationale}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </motion.div>
             )}

@@ -46,4 +46,12 @@ export const TOPICS: Topic[] = [
     questionCount: 16,
     driveFileId: '1g7tRH534321Gpi_-6acHmqbmORvCL2Jn',
   },
+  {
+    id: 'msk',
+    title: 'Musculoesquelético',
+    description: 'UC 19 — Gota, artrite reumatoide, osteoartrite, espondilite anquilosante, punho e ombro',
+    icon: 'Bone',
+    color: '#8B5CF6',
+    questionCount: 35,
+  },
 ];

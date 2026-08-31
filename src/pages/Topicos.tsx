@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { ElementType } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Brain, Activity, Zap, Circle, Layers,
+  Brain, Activity, Zap, Circle, Layers, Bone,
   ExternalLink, BookOpen, FileText,
 } from 'lucide-react';
 import { TOPICS } from '../data/topics';
@@ -12,7 +12,7 @@ import { DifficultyBadge } from '../components/DifficultyBadge';
 import type { Difficulty } from '../types';
 
 const ICON_MAP: Record<string, ElementType> = {
-  Brain, Activity, Zap, Circle, Layers,
+  Brain, Activity, Zap, Circle, Layers, Bone,
 };
 
 const TOPIC_DRIVE_KEYS: Record<string, keyof typeof DRIVE_FILES> = {

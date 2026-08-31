@@ -2,7 +2,7 @@ import type { ElementType } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Brain, Activity, Zap, Circle, Layers,
+  Brain, Activity, Zap, Circle, Layers, Bone,
   CheckCircle2, Target, Flame, Trophy, ArrowRight, Play
 } from 'lucide-react';
 import { TOPICS } from '../data/topics';
@@ -10,7 +10,7 @@ import { useAppStore } from '../store';
 import { StatCard } from '../components/StatCard';
 
 const ICON_MAP: Record<string, ElementType> = {
-  Brain, Activity, Zap, Circle, Layers,
+  Brain, Activity, Zap, Circle, Layers, Bone,
 };
 
 const container = {
