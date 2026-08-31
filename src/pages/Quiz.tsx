@@ -75,7 +75,7 @@ export function Quiz() {
 
   if (!started) {
     const topicQuestions = QUESTIONS.filter((q) => q.topicId === topicId);
-    const count = Math.min(topicQuestions.length, 15);
+    const count = topicQuestions.length;
     return (
       <div className="max-w-lg mx-auto px-4 py-16 text-center space-y-6">
         <motion.div

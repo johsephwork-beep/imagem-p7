@@ -34,7 +34,8 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
   const imagesAfterAnswer  = images.filter(img => img.show_after_answer);
 
   function handleSelect(id: AnswerOption) {
-    if (state !== 'idle') return;
+    // Permite trocar de alternativa livremente até confirmar a resposta
+    if (state === 'revealed') return;
     setSelected(id);
     setState('selected');
   }
@@ -104,9 +105,15 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
         )}
       </div>
 
-      {/* Imagens Supabase — exibidas junto ao enunciado */}
+      {/* Imagens Supabase — exibidas junto ao enunciado.
+          A legenda descreve o achado, então só aparece após a resposta. */}
       {!imagesLoading && imagesWithQuestion.map(img => (
-        <QuestionImage key={img.id} url={img.public_url} caption={img.caption} />
+        <QuestionImage
+          key={img.id}
+          url={img.public_url}
+          caption={img.caption}
+          revealed={state === 'revealed'}
+        />
       ))}
 
       {/* Imagem Drive/URL (campo image legado) — só exibe se não há imagens Supabase */}
@@ -116,6 +123,7 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
             ? getDriveThumbnailUrl(question.image.src, 'md')
             : question.image.src}
           caption={question.image.caption}
+          revealed={state === 'revealed'}
         />
       )}
 

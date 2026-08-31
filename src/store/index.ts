@@ -27,7 +27,6 @@ interface AppStore {
   getSessionById: (id: string) => QuizSession | undefined;
 }
 
-const MAX_QUESTIONS_PER_SESSION = 15;
 
 export const useAppStore = create<AppStore>()(
   persist(
@@ -46,10 +45,13 @@ export const useAppStore = create<AppStore>()(
             .flatMap((s) => s.answers.map((a) => a.questionId))
         );
 
+        // A sessão usa TODAS as questões do tópico — a contagem exibida no card
+        // é a mesma que o quiz entrega. As ainda não respondidas vêm primeiro,
+        // e cada grupo é embaralhado internamente.
+        const shuffle = <T,>(arr: T[]) => [...arr].sort(() => Math.random() - 0.5);
         const unanswered = topicQuestions.filter((q) => !answeredIds.has(q.id));
-        const pool = unanswered.length > 0 ? unanswered : topicQuestions;
-        const shuffled = [...pool].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, MAX_QUESTIONS_PER_SESSION);
+        const alreadySeen = topicQuestions.filter((q) => answeredIds.has(q.id));
+        const selected = [...shuffle(unanswered), ...shuffle(alreadySeen)];
 
         const session: QuizSession = {
           id: generateId(),

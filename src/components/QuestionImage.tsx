@@ -4,18 +4,27 @@ import { Maximize2, X, ImageOff, Loader2 } from 'lucide-react';
 interface QuestionImageProps {
   url: string;
   caption?: string | null;
+  /** A legenda descreve o achado e entregaria o gabarito. Enquanto false,
+   *  nada do texto é exposto — nem no alt, nem no lightbox. Padrão: true. */
+  revealed?: boolean;
 }
 
-export function QuestionImage({ url, caption }: QuestionImageProps) {
+export function QuestionImage({ url, caption, revealed = true }: QuestionImageProps) {
   const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  // Só libera a legenda depois da resposta — antes disso ela induziria o gabarito
+  const shownCaption = revealed ? caption : null;
+  const altText = revealed
+    ? (caption ?? 'Imagem de exame radiológico')
+    : 'Imagem de exame radiológico';
 
   if (status === 'error') {
     return (
       <div className="my-4 flex flex-col items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 p-6 text-sm text-gray-500">
         <ImageOff size={24} />
         <span>Imagem indisponível</span>
-        {caption && <span className="text-xs text-center">{caption}</span>}
+        {shownCaption && <span className="text-xs text-center">{shownCaption}</span>}
       </div>
     );
   }
@@ -32,7 +41,7 @@ export function QuestionImage({ url, caption }: QuestionImageProps) {
 
         <img
           src={url}
-          alt={caption ?? 'Imagem de exame radiológico'}
+          alt={altText}
           className={`w-full object-contain max-h-72 transition-all duration-200 group-hover:scale-[1.02] ${
             status === 'loaded' ? 'opacity-100' : 'opacity-0 h-0'
           }`}
@@ -51,9 +60,9 @@ export function QuestionImage({ url, caption }: QuestionImageProps) {
           </button>
         )}
 
-        {caption && status === 'loaded' && (
+        {shownCaption && status === 'loaded' && (
           <figcaption className="bg-black/50 px-3 py-1.5 text-center text-xs text-gray-400 backdrop-blur-sm">
-            {caption}
+            {shownCaption}
           </figcaption>
         )}
       </figure>
@@ -72,13 +81,13 @@ export function QuestionImage({ url, caption }: QuestionImageProps) {
           </button>
           <img
             src={url}
-            alt={caption ?? 'Imagem ampliada'}
+            alt={revealed ? (caption ?? 'Imagem ampliada') : 'Imagem ampliada'}
             className="max-h-[90vh] max-w-[90vw] rounded-xl object-contain shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />
-          {caption && (
+          {shownCaption && (
             <p className="absolute bottom-6 text-center text-sm text-gray-300 px-4">
-              {caption}
+              {shownCaption}
             </p>
           )}
         </div>
