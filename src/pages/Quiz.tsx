@@ -8,6 +8,9 @@ import { useAppStore } from '../store';
 import type { AnswerOption } from '../types';
 import { QuestionCard } from '../components/QuestionCard';
 
+/** Blocos oferecidos na tela inicial; só entram os menores que o total do tópico. */
+const SESSION_SIZES = [10, 15, 25] as const;
+
 export function Quiz() {
   const { topicId } = useParams<{ topicId: string }>();
   const navigate = useNavigate();
@@ -22,6 +25,8 @@ export function Quiz() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [elapsed, setElapsed] = useState(0);
+  // null = todas as questões do tópico
+  const [sessionSize, setSessionSize] = useState<number | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const questionStartRef = useRef<number>(Date.now());
 
@@ -36,7 +41,7 @@ export function Quiz() {
 
   function handleStart() {
     if (topicId) {
-      startSession(topicId);
+      startSession(topicId, sessionSize ?? undefined);
       setStarted(true);
       setCurrentIndex(0);
       setAnswered(false);
@@ -100,12 +105,52 @@ export function Quiz() {
               <Clock size={14} /> Timer por questão
             </span>
           </div>
+
+          {/* Tamanho da sessão — só aparece se houver mais questões que o menor bloco */}
+          {count > SESSION_SIZES[0] && (
+            <div className="space-y-2 pt-1">
+              <p className="text-brand-muted text-xs uppercase tracking-wider">
+                Quantas questões nesta sessão?
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                {SESSION_SIZES.filter((n) => n < count).map((n) => (
+                  <button
+                    key={n}
+                    onClick={() => setSessionSize(n)}
+                    className={`px-4 py-1.5 rounded-full text-sm font-mono border transition-colors ${
+                      sessionSize === n
+                        ? 'text-white border-transparent'
+                        : 'text-brand-muted border-brand-border hover:text-brand-text'
+                    }`}
+                    style={sessionSize === n ? { background: topic.color } : undefined}
+                  >
+                    {n}
+                  </button>
+                ))}
+                <button
+                  onClick={() => setSessionSize(null)}
+                  className={`px-4 py-1.5 rounded-full text-sm font-mono border transition-colors ${
+                    sessionSize === null
+                      ? 'text-white border-transparent'
+                      : 'text-brand-muted border-brand-border hover:text-brand-text'
+                  }`}
+                  style={sessionSize === null ? { background: topic.color } : undefined}
+                >
+                  Todas ({count})
+                </button>
+              </div>
+              <p className="text-brand-muted text-xs">
+                As que você ainda não respondeu vêm primeiro.
+              </p>
+            </div>
+          )}
+
           <button
             onClick={handleStart}
             className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90"
             style={{ background: topic.color }}
           >
-            Começar Quiz
+            Começar Quiz · {sessionSize ?? count} {(sessionSize ?? count) === 1 ? 'questão' : 'questões'}
           </button>
           <button
             onClick={() => navigate('/')}

@@ -15,7 +15,8 @@ interface AppStore {
   currentSession: QuizSession | null;
   sessionQuestionIds: string[];
 
-  startSession: (topicId: string) => void;
+  /** `limit` opcional — nº de questões da sessão. Omitido = todas do tópico. */
+  startSession: (topicId: string, limit?: number) => void;
   answerQuestion: (questionId: string, chosen: string, correct: boolean, timeSpentSeconds: number) => void;
   finishSession: () => string;
   clearCurrentSession: () => void;
@@ -35,7 +36,7 @@ export const useAppStore = create<AppStore>()(
       currentSession: null,
       sessionQuestionIds: [],
 
-      startSession: (topicId: string) => {
+      startSession: (topicId: string, limit?: number) => {
         const topicQuestions = QUESTIONS.filter((q) => q.topicId === topicId);
 
         const { sessions } = get();
@@ -45,13 +46,14 @@ export const useAppStore = create<AppStore>()(
             .flatMap((s) => s.answers.map((a) => a.questionId))
         );
 
-        // A sessão usa TODAS as questões do tópico — a contagem exibida no card
-        // é a mesma que o quiz entrega. As ainda não respondidas vêm primeiro,
-        // e cada grupo é embaralhado internamente.
+        // As ainda não respondidas vêm primeiro, cada grupo embaralhado.
+        // `limit` ausente ou >= total significa a sessão inteira do tópico.
         const shuffle = <T,>(arr: T[]) => [...arr].sort(() => Math.random() - 0.5);
         const unanswered = topicQuestions.filter((q) => !answeredIds.has(q.id));
         const alreadySeen = topicQuestions.filter((q) => answeredIds.has(q.id));
-        const selected = [...shuffle(unanswered), ...shuffle(alreadySeen)];
+        const ordered = [...shuffle(unanswered), ...shuffle(alreadySeen)];
+        const selected =
+          limit && limit > 0 && limit < ordered.length ? ordered.slice(0, limit) : ordered;
 
         const session: QuizSession = {
           id: generateId(),
