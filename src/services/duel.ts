@@ -114,6 +114,29 @@ export function watchMatch(matchId: string, onChange: (m: DuelMatch) => void): (
   };
 }
 
+export interface DuelPlayer {
+  player_id: string;
+  name: string;
+  wins: number;
+  losses: number;
+  draws: number;
+  matches: number;
+  total_points: number;
+  best_score: number;
+}
+
+/** Ranking ordenado por vitórias e, no desempate, por pontos acumulados. */
+export async function fetchRanking(limite = 20): Promise<DuelPlayer[]> {
+  const { data, error } = await supabase
+    .from('duel_players')
+    .select('*')
+    .order('wins', { ascending: false })
+    .order('total_points', { ascending: false })
+    .limit(limite);
+  if (error) return [];
+  return (data as unknown as DuelPlayer[]) ?? [];
+}
+
 /** true se este navegador é o jogador 1 da partida. */
 export function isPlayerOne(m: DuelMatch): boolean {
   return m.p1_id === getPlayerId();

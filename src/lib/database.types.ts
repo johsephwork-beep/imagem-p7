@@ -12,6 +12,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      duel_players: {
+        Row: {
+          best_score: number
+          draws: number
+          losses: number
+          matches: number
+          name: string
+          player_id: string
+          total_points: number
+          updated_at: string
+          wins: number
+        }
+        Insert: {
+          best_score?: number
+          draws?: number
+          losses?: number
+          matches?: number
+          name: string
+          player_id: string
+          total_points?: number
+          updated_at?: string
+          wins?: number
+        }
+        Update: {
+          best_score?: number
+          draws?: number
+          losses?: number
+          matches?: number
+          name?: string
+          player_id?: string
+          total_points?: number
+          updated_at?: string
+          wins?: number
+        }
+        Relationships: []
+      }
       duel_matches: {
         Row: {
           created_at: string
@@ -28,6 +64,7 @@ export type Database = {
           p2_score: number
           question_ids: string[]
           started_at: string | null
+          stats_applied: boolean
           status: string
           updated_at: string
         }
@@ -46,6 +83,7 @@ export type Database = {
           p2_score?: number
           question_ids?: string[]
           started_at?: string | null
+          stats_applied?: boolean
           status?: string
           updated_at?: string
         }
@@ -64,6 +102,7 @@ export type Database = {
           p2_score?: number
           question_ids?: string[]
           started_at?: string | null
+          stats_applied?: boolean
           status?: string
           updated_at?: string
         }

@@ -15,6 +15,7 @@ import {
   opponentAnswered, opponentDone, myScore,
   type DuelMatch,
 } from '../services/duel';
+import { DuelRanking } from '../components/DuelRanking';
 import type { AnswerOption } from '../types';
 
 type Fase = 'lobby' | 'buscando' | 'jogando' | 'aguardando' | 'fim';
@@ -196,6 +197,14 @@ export function Duelo() {
                 className="w-full py-2 text-brand-muted text-sm hover:text-brand-text transition-colors">
           Voltar
         </button>
+
+        <div className="pt-4 border-t border-brand-border text-left space-y-3">
+          <div className="flex items-center gap-2">
+            <Trophy size={14} style={{ color: COR }} />
+            <h2 className="text-brand-text text-sm font-600">Ranking</h2>
+          </div>
+          <DuelRanking limite={5} />
+        </div>
       </Moldura>
     );
   }
@@ -275,6 +284,15 @@ export function Duelo() {
                 className="w-full py-2 text-brand-muted text-sm hover:text-brand-text transition-colors">
           Voltar ao dashboard
         </button>
+
+        <div className="pt-4 border-t border-brand-border text-left space-y-3">
+          <div className="flex items-center gap-2">
+            <Trophy size={14} style={{ color: COR }} />
+            <h2 className="text-brand-text text-sm font-600">Ranking</h2>
+          </div>
+          {/* chaveRecarga força a releitura após o duelo ser creditado */}
+          <DuelRanking limite={5} chaveRecarga={match.id} />
+        </div>
       </Moldura>
     );
   }
