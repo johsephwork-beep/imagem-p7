@@ -12,6 +12,63 @@ export type Database = {
   }
   public: {
     Tables: {
+      duel_matches: {
+        Row: {
+          created_at: string
+          id: string
+          p1_answered: number
+          p1_done: boolean
+          p1_id: string
+          p1_name: string
+          p1_score: number
+          p2_answered: number
+          p2_done: boolean
+          p2_id: string | null
+          p2_name: string | null
+          p2_score: number
+          question_ids: string[]
+          started_at: string | null
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          p1_answered?: number
+          p1_done?: boolean
+          p1_id: string
+          p1_name: string
+          p1_score?: number
+          p2_answered?: number
+          p2_done?: boolean
+          p2_id?: string | null
+          p2_name?: string | null
+          p2_score?: number
+          question_ids?: string[]
+          started_at?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          p1_answered?: number
+          p1_done?: boolean
+          p1_id?: string
+          p1_name?: string
+          p1_score?: number
+          p2_answered?: number
+          p2_done?: boolean
+          p2_id?: string | null
+          p2_name?: string | null
+          p2_score?: number
+          question_ids?: string[]
+          started_at?: string | null
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       question_images: {
         Row: {
           caption: string | null
@@ -56,7 +113,24 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      cancel_duel: {
+        Args: { p_id: string; p_match: string }
+        Returns: undefined
+      }
+      find_duel: {
+        Args: { p_id: string; p_name: string; p_questions: string[] }
+        Returns: Database["public"]["Tables"]["duel_matches"]["Row"]
+      }
+      submit_duel_score: {
+        Args: {
+          p_answered: number
+          p_done: boolean
+          p_id: string
+          p_match: string
+          p_score: number
+        }
+        Returns: Database["public"]["Tables"]["duel_matches"]["Row"]
+      }
     }
     Enums: {
       [_ in never]: never

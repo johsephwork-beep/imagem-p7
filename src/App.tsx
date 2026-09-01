@@ -6,6 +6,7 @@ import { Quiz } from './pages/Quiz';
 import { Resultado } from './pages/Resultado';
 import { Desempenho } from './pages/Desempenho';
 import { Topicos } from './pages/Topicos';
+import { Duelo } from './pages/Duelo';
 import { useLenis, getLenis } from './hooks/useLenis';
 
 /** Sobe o scroll para o topo a cada troca de rota. */
@@ -36,6 +37,7 @@ function AppInner() {
           <Route path="/resultado/:sessionId" element={<Resultado />} />
           <Route path="/desempenho"           element={<Desempenho />} />
           <Route path="/topicos"              element={<Topicos />} />
+          <Route path="/duelo"                element={<Duelo />} />
         </Routes>
       </main>
 

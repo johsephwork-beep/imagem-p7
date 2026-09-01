@@ -2,7 +2,7 @@ import type { ElementType } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Brain, Activity, Zap, Circle, Layers, Bone,
+  Brain, Activity, Zap, Circle, Layers, Bone, Swords,
   CheckCircle2, Target, Flame, Trophy, ArrowRight, Play
 } from 'lucide-react';
 import { TOPICS } from '../data/topics';
@@ -100,6 +100,27 @@ export function Dashboard() {
           </button>
         </motion.div>
       )}
+
+      {/* Duelo — modo multiplayer */}
+      <motion.button
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        onClick={() => navigate('/duelo')}
+        className="w-full text-left bg-brand-surface border rounded-xl p-5 flex items-center gap-4 hover:border-opacity-80 transition-all group"
+        style={{ borderColor: '#F43F5E33' }}
+      >
+        <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+             style={{ background: '#F43F5E22' }}>
+          <Swords size={24} style={{ color: '#F43F5E' }} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-display font-600 text-brand-text">Duelo</h3>
+          <p className="text-brand-muted text-sm">
+            7 perguntas · 30s cada · quem acerta mais rápido pontua mais
+          </p>
+        </div>
+        <ArrowRight size={18} className="text-brand-muted group-hover:translate-x-0.5 transition-transform flex-shrink-0" />
+      </motion.button>
 
       {/* Topic grid */}
       <div>
