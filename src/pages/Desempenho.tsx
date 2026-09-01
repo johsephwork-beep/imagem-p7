@@ -3,11 +3,10 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
   LineChart, Line, CartesianGrid, Cell,
 } from 'recharts';
-import { CheckCircle2, Target, Flame, Trophy, AlertTriangle, Swords } from 'lucide-react';
+import { CheckCircle2, Target, Flame, Trophy, AlertTriangle } from 'lucide-react';
 import { useAppStore } from '../store';
 import { TOPICS } from '../data/topics';
 import { StatCard } from '../components/StatCard';
-import { DuelRanking } from '../components/DuelRanking';
 import { formatDate, formatDuration } from '../utils/stats';
 
 function barColor(pct: number) {
@@ -177,22 +176,6 @@ export function Desempenho() {
           </div>
         </div>
       )}
-
-      {/* Ranking do Duelo — placar entre todos que jogaram o modo multiplayer */}
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="space-y-4"
-      >
-        <div className="flex items-center gap-2">
-          <Swords size={18} style={{ color: '#F43F5E' }} />
-          <h2 className="font-display font-600 text-lg text-brand-text">Ranking do Duelo</h2>
-        </div>
-        <p className="text-brand-muted text-sm -mt-2">
-          Ordenado por vitórias; em caso de empate, por pontos acumulados.
-        </p>
-        <DuelRanking limite={20} />
-      </motion.div>
 
       {overall.totalAnswered === 0 && (
         <div className="text-center py-16 text-brand-muted">

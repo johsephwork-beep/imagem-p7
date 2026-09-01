@@ -203,7 +203,10 @@ export function Duelo() {
             <Trophy size={14} style={{ color: COR }} />
             <h2 className="text-brand-text text-sm font-600">Ranking</h2>
           </div>
-          <DuelRanking limite={5} />
+          <p className="text-brand-muted text-xs -mt-1">
+            Por vitórias; em caso de empate, decidem os pontos acumulados.
+          </p>
+          <DuelRanking limite={10} />
         </div>
       </Moldura>
     );
