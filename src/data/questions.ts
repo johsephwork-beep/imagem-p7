@@ -2140,7 +2140,7 @@ export const QUESTIONS: Question[] = [
   // DRC & DOENÇA RENAL VASCULAR — UC 20
   // drc-01 a 07: questões da monitoria
   // drc-08 a 14: provas antigas de Imagem UC 20
-  // drc-15 a 24: inéditas (engenharia reversa: padrão UC 20 + residência)
+  // drc-15, 17, 20 a 23: inéditas (engenharia reversa: padrão UC 20 + residência)
   // ─────────────────────────────────────────
   {
     id: 'drc-01',
@@ -2484,29 +2484,6 @@ export const QUESTIONS: Question[] = [
       'DRC com rins normais ou aumentados — mnemônico: Diabetes, Amiloidose, Doença policística, nefropatia do HIV e Mieloma. Rins < 9 cm e hiperecogênicos indicam cronicidade e baixa chance de reversão, dado que também pesa contra a indicação de biópsia renal.',
   },
   {
-    id: 'drc-16',
-    topicId: 'drc_drv',
-    text: 'Homem de 68 anos, tabagista, com hipertensão resistente a quatro fármacos e sopro abdominal periumbilical, realiza ultrassonografia com Doppler das artérias renais. Qual conjunto de achados indica estenose hemodinamicamente significativa (≥ 60%) da artéria renal?',
-    options: [
-      { id: 'A', text: 'VPS de 280 cm/s no óstio da artéria renal, relação renal-aórtica de 4,1 e curvas intrarrenais com padrão tardus-parvus (tempo de aceleração de 110 ms)',
-        rationale: 'Correta. Reúne os critérios diretos no local da estenose (VPS > 180–200 cm/s e relação renal-aórtica > 3,5) e o critério indireto a jusante (padrão tardus-parvus, com tempo de aceleração > 70 ms).' },
-      { id: 'B', text: 'Velocidade de pico sistólico (VPS) de 95 cm/s na artéria renal, relação renal-aórtica de 1,4 e curvas intrarrenais com ascensão sistólica rápida',
-        rationale: 'Todos os parâmetros estão dentro da normalidade: VPS < 180 cm/s, relação renal-aórtica < 3,5 e ascensão sistólica rápida nas artérias intrarrenais.' },
-      { id: 'C', text: 'Índices de resistividade intrarrenais de 0,65 bilateralmente, simétricos, com fluxo diastólico preservado',
-        rationale: 'IR de 0,65, simétrico, com diástole preservada, é padrão normal. Na estenose unilateral significativa, espera-se diferença de IR entre os rins > 0,05 e curva amortecida no lado estenótico.' },
-      { id: 'D', text: 'Ausência de fluxo na veia renal e fluxo diastólico arterial reverso no parênquima',
-        rationale: 'É o padrão da trombose de VEIA renal: sem drenagem venosa, a resistência intrarrenal sobe a ponto de inverter o fluxo diastólico arterial.' },
-      { id: 'E', text: 'Rins com 11 cm, ecogenicidade normal e boa diferenciação corticomedular',
-        rationale: 'A morfologia normal não exclui estenose — o diagnóstico é hemodinâmico, feito pelo Doppler. Rins de tamanho normal são até esperados em estenoses recentes.' },
-    ],
-    correctAnswer: 'A',
-    difficulty: 'dificil',
-    tags: ['DRV', 'Doppler', 'estenose de artéria renal', 'tardus-parvus', 'hipertensão renovascular', 'inédita'],
-    source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
-    explanation:
-      'Critérios diretos (no local da estenose): VPS > 180–200 cm/s e relação renal-aórtica > 3,5. Critérios indiretos (a jusante): padrão tardus-parvus nas artérias intrarrenais, com tempo de aceleração > 70 ms, e diferença de IR entre os rins > 0,05. O Doppler é a triagem de escolha — sem contraste e sem radiação —, mas é operador-dependente e limitado por obesidade e gás intestinal; o padrão-ouro continua sendo a arteriografia.',
-  },
-  {
     id: 'drc-17',
     topicId: 'drc_drv',
     text: 'Homem de 71 anos, diabético e coronariopata, tem hipertensão de difícil controle. Após iniciar enalapril, a creatinina sobe de 1,2 para 1,9 mg/dL em duas semanas. A ultrassonografia mostra rim direito com 8,6 cm e esquerdo com 10,9 cm. Qual a principal hipótese diagnóstica e o exame inicial mais adequado?',
@@ -2528,52 +2505,6 @@ export const QUESTIONS: Question[] = [
     source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
     explanation:
       'Pistas clínicas de hipertensão renovascular mais cobradas em residência: HAS resistente, início < 30 ou > 55 anos, piora abrupta de HAS antes controlada, elevação > 30% da creatinina após IECA/BRA, edema agudo de pulmão súbito ("flash") e assimetria renal. Na suspeita: Doppler primeiro; angio-TC ou angio-RM conforme a função renal; arteriografia quando se planeja intervir.',
-  },
-  {
-    id: 'drc-18',
-    topicId: 'drc_drv',
-    text: 'Sobre o tratamento da estenose de artéria renal, analise as afirmativas:\n\nI — Na displasia fibromuscular com repercussão hemodinâmica, a angioplastia com balão, em geral sem stent, é o tratamento de escolha.\nII — Na estenose aterosclerótica, a revascularização de rotina não se mostrou superior ao tratamento clínico otimizado (anti-hipertensivos, estatina e antiagregante) na maioria dos pacientes.\nIII — Edema agudo de pulmão súbito e recorrente ("flash") em paciente com estenose aterosclerótica bilateral grave é indicação de revascularização.\nIV — Índice de resistividade intrarrenal > 0,80 no rim acometido prediz boa resposta à revascularização.\n\nEstão corretas:',
-    options: [
-      { id: 'A', text: 'Apenas I e II',
-        rationale: 'A afirmativa III também está correta.' },
-      { id: 'B', text: 'Apenas II e IV',
-        rationale: 'IV é falsa, e I e III são verdadeiras.' },
-      { id: 'C', text: 'Apenas I, III e IV',
-        rationale: 'II é verdadeira e IV é falsa.' },
-      { id: 'D', text: 'Apenas I, II e III',
-        rationale: 'Correta. I, II e III são verdadeiras; IV é falsa (veja o comentário).' },
-      { id: 'E', text: 'I, II, III e IV',
-        rationale: 'IV é falsa: IR elevado prediz MÁ resposta.' },
-    ],
-    correctAnswer: 'D',
-    difficulty: 'dificil',
-    tags: ['DRV', 'tratamento', 'angioplastia', 'displasia fibromuscular', 'aterosclerose', 'índice de resistividade', 'inédita'],
-    source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
-    explanation:
-      'I — verdadeira: a DFM responde muito bem à angioplastia com balão; o stent fica para dissecção ou falha. II — verdadeira: os ensaios ASTRAL (2009) e CORAL (2014) não mostraram benefício da angioplastia com stent sobre o tratamento clínico otimizado na maioria dos pacientes com estenose aterosclerótica. III — verdadeira: edema pulmonar "flash", perda rápida de função com estenose bilateral grave e HAS verdadeiramente refratária são as situações em que se considera revascularizar. IV — falsa: IR > 0,80 indica doença parenquimatosa e microvascular já estabelecida e prediz MÁ resposta — o rim não melhora porque o problema já não é só a artéria.',
-  },
-  {
-    id: 'drc-19',
-    topicId: 'drc_drv',
-    text: 'Homem de 62 anos, em hemodiálise três vezes por semana, tem suspeita de espondilodiscite, e o radiologista considera essencial a RM com contraste. Qual a conduta mais adequada em relação ao gadolínio?',
-    options: [
-      { id: 'A', text: 'Realizar o exame com agente de gadolínio do grupo II (macrocíclico), na menor dose diagnóstica, programando hemodiálise logo após o exame',
-        rationale: 'Correta. É a recomendação do ACR: agente do grupo II (menor dissociação do quelante), menor dose diagnóstica e hemodiálise o mais cedo possível após o exame, de preferência no mesmo dia, para acelerar a eliminação.' },
-      { id: 'B', text: 'Contraindicação absoluta a qualquer gadolínio; substituir por TC com contraste iodado, já que o paciente não tem função renal a preservar',
-        rationale: 'Não há contraindicação absoluta quando o exame é essencial, e a troca pelo iodado ignora a função renal residual, que deve ser preservada mesmo em quem dialisa.' },
-      { id: 'C', text: 'Converter temporariamente para diálise peritoneal, que remove o gadolínio com mais eficiência que a hemodiálise',
-        rationale: 'É o oposto: a diálise peritoneal remove o gadolínio de forma muito menos eficiente que a hemodiálise.' },
-      { id: 'D', text: 'Preferir agentes lineares (grupo I), por terem meia-vida mais curta',
-        rationale: 'Os agentes lineares (grupo I) são os de MAIOR risco de fibrose nefrogênica sistêmica, por se dissociarem mais facilmente do quelante. Devem ser evitados nesses pacientes.' },
-      { id: 'E', text: 'Manter a rotina habitual de diálise, pois a fibrose nefrogênica sistêmica é dose-independente e a hemodiálise posterior não altera o risco',
-        rationale: 'O risco é dose-dependente e a doença se instala ao longo de dias a meses: reduzir o tempo de exposição com hemodiálise precoce diminui o risco.' },
-    ],
-    correctAnswer: 'A',
-    difficulty: 'dificil',
-    tags: ['DRC', 'fibrose nefrogênica sistêmica', 'gadolínio', 'hemodiálise', 'RM', 'inédita'],
-    source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
-    explanation:
-      'Quem tem risco de fibrose nefrogênica sistêmica: TFG < 30, diálise (hemodiálise ou peritoneal) e lesão renal aguda. Com agentes do grupo II, o risco tornou-se muito baixo, mas não nulo. Regra de bolso: TFG < 30 → indicação precisa, grupo II, menor dose; em hemodiálise → dialisar logo após o exame.',
   },
   {
     id: 'drc-20',
@@ -2666,29 +2597,6 @@ export const QUESTIONS: Question[] = [
     source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
     explanation:
       'Indicações de reparo do aneurisma de artéria renal: sintomas, ruptura, dissecção, hipertensão renovascular associada, crescimento, diâmetro acima do limiar (classicamente > 2 cm; a diretriz da Society for Vascular Surgery de 2020 usa > 3 cm para a população geral) e — em qualquer tamanho — mulheres em idade fértil que planejam gestar.',
-  },
-  {
-    id: 'drc-24',
-    topicId: 'drc_drv',
-    text: 'Homem de 34 anos, cujo pai está em hemodiálise por doença renal policística, realiza ultrassonografia de rastreio que mostra três cistos no rim direito e dois no esquerdo. Um irmão teve hemorragia subaracnoide aos 40 anos. Assinale a alternativa correta.',
-    options: [
-      { id: 'A', text: 'Preenche critério ultrassonográfico para doença renal policística autossômica dominante e tem indicação de rastrear aneurisma intracraniano com angio-RM, pela história familiar de hemorragia subaracnoide',
-        rationale: 'Correta. Preenche o critério de Pei para a idade e tem a combinação que indica rastreio de aneurisma: DRPAD + história familiar de aneurisma ou HSA. O exame é a angio-RM intracraniana (sequência TOF), sem contraste.' },
-      { id: 'B', text: 'Não preenche critérios diagnósticos; repetir a ultrassonografia após os 40 anos',
-        rationale: 'Pelos critérios de Pei, entre 15 e 39 anos bastam ≥ 3 cistos renais no total (uni ou bilaterais) em quem tem história familiar. Ele tem cinco.' },
-      { id: 'C', text: 'O diagnóstico exige TC com contraste, pois a ultrassonografia não tem valor nos critérios',
-        rationale: 'Os critérios de Pei são ultrassonográficos. TC e RM ficam para casos duvidosos ou para medir o volume renal total, que tem valor prognóstico.' },
-      { id: 'D', text: 'Trata-se de doença renal policística autossômica recessiva, pela idade de apresentação',
-        rationale: 'A forma recessiva manifesta-se no período perinatal ou na infância, com rins grandes e hiperecogênicos e fibrose hepática congênita. Herança vertical (pai afetado) em adulto jovem aponta para a forma dominante.' },
-      { id: 'E', text: 'Cistos hepáticos não seriam esperados, pois são exclusivos da forma recessiva',
-        rationale: 'Cistos hepáticos são a manifestação extrarrenal mais comum da forma DOMINANTE, e sua prevalência aumenta com a idade.' },
-    ],
-    correctAnswer: 'A',
-    difficulty: 'medio',
-    tags: ['DRC', 'doença renal policística', 'critérios de Pei', 'aneurisma intracraniano', 'inédita'],
-    source: 'Questão inédita — Monitoria IMAGEM UC 20 (padrão prova e residência)',
-    explanation:
-      'Critérios de Pei (com história familiar positiva): 15–39 anos → ≥ 3 cistos (uni ou bilaterais); 40–59 anos → ≥ 2 cistos em cada rim; ≥ 60 anos → ≥ 4 cistos em cada rim. Manifestações extrarrenais que caem em prova: cistos hepáticos, aneurismas intracranianos, prolapso de valva mitral, divertículos colônicos e hérnias de parede abdominal.',
   },
 
   // ─────────────────────────────────────────

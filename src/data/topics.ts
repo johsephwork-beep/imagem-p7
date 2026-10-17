@@ -60,7 +60,7 @@ export const TOPICS: Topic[] = [
     description: 'UC 20 — Doença renal crônica, hipertensão renovascular, displasia fibromuscular, infarto renal e contraste',
     icon: 'Bean',
     color: '#0EA5E9',
-    questionCount: 24,
+    questionCount: 20,
   },
   {
     id: 'dispneia',
