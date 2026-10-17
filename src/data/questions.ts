@@ -2145,7 +2145,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 'drc-01',
     topicId: 'drc_drv',
-    text: 'Paciente masculino, 62 anos, queixa-se de edema, náuseas e vômitos há 5 meses, relata ter realizado exames laboratoriais que evidenciaram aumento nos níveis de Creatinina Urinária. Foi realizada uma Ultrassonografia para avaliação renal. De acordo com os achados de imagem abaixo, é correto afirmar:',
+    text: 'Paciente masculino, 62 anos, queixa-se de edema, náuseas e vômitos há 5 meses, relata ter realizado exames laboratoriais que evidenciaram aumento nos níveis de Creatinina Urinária. Foi realizada uma Ultrassonografia para avaliação renal. Sobre a avaliação ultrassonográfica na DRC, é correto afirmar:',
     options: [
       { id: 'A', text: 'Dentre as principais características da DRC ao exame ultrassonográfico, destaca-se a assimetria renal, caracterizada por uma diferença de tamanho entre os rins > 1cm.',
         rationale: 'Assimetria não é característica da DRC: a doença crônica tende a reduzir os dois rins de forma simétrica. Assimetria sugere doença unilateral, como a estenose de artéria renal. Além disso, o ponto de corte adotado na aula é > 2 cm, não > 1 cm.' },
@@ -2281,7 +2281,7 @@ export const QUESTIONS: Question[] = [
   {
     id: 'drc-07',
     topicId: 'drc_drv',
-    text: 'Paciente masculino, 65 anos, chega ao posto com dor no flanco esquerdo. Exames laboratoriais revelam aumento da Creatinina Sérica. Foi realizada uma TC com contraste, com os seguintes achados. Sobre o caso clínico e os achados de imagem, marque a alternativa incorreta:',
+    text: 'Paciente masculino, 65 anos, chega ao posto com dor no flanco esquerdo. Exames laboratoriais revelam aumento da Creatinina Sérica. Foi realizada uma TC com contraste, que evidenciou achados compatíveis com infarto renal. Sobre o caso clínico e os achados tomográficos, marque a alternativa incorreta:',
     options: [
       { id: 'A', text: 'Em casos de infarto renal, pode-se observar o chamado "sinal do bordo cortical”, caracterizado pela preservação do realce do córtex renal mais periférico devido à irrigação colateral.',
         rationale: 'Afirmativa verdadeira. O sinal do bordo cortical é a preservação de fina faixa de realce subcapsular, nutrida por artérias capsulares colaterais. Surge horas após o evento e favorece infarto sobre pielonefrite.' },
