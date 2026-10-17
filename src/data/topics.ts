@@ -62,4 +62,12 @@ export const TOPICS: Topic[] = [
     color: '#0EA5E9',
     questionCount: 24,
   },
+  {
+    id: 'dispneia',
+    title: 'Achados de Imagem na Dispneia',
+    description: 'RX e TC na dispneia — congestão pulmonar, pneumonia, TEP, pneumotórax e seus diferenciais',
+    icon: 'Wind',
+    color: '#F97316',
+    questionCount: 15,
+  },
 ];
