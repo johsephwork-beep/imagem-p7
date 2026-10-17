@@ -54,4 +54,12 @@ export const TOPICS: Topic[] = [
     color: '#8B5CF6',
     questionCount: 35,
   },
+  {
+    id: 'drc_drv',
+    title: 'DRC & Doença Renal Vascular',
+    description: 'UC 20 — Doença renal crônica, hipertensão renovascular, displasia fibromuscular, infarto renal e contraste',
+    icon: 'Bean',
+    color: '#0EA5E9',
+    questionCount: 24,
+  },
 ];

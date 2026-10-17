@@ -99,7 +99,7 @@ export function QuestionCard({ question, index, total, onAnswer }: QuestionCardP
 
       {/* Question text */}
       <div className="bg-brand-surface border border-brand-border rounded-xl p-5" style={{ borderColor: 'rgba(99,102,241,0.2)' }}>
-        <p className="text-brand-text leading-relaxed">{question.text}</p>
+        <p className="text-brand-text leading-relaxed whitespace-pre-line">{question.text}</p>
         {question.source && (
           <p className="text-brand-muted text-xs mt-3 font-mono">Fonte: {question.source}</p>
         )}
