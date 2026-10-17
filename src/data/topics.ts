@@ -68,6 +68,6 @@ export const TOPICS: Topic[] = [
     description: 'RX e TC na dispneia — congestão pulmonar, pneumonia, TEP, pneumotórax e seus diferenciais',
     icon: 'Wind',
     color: '#F97316',
-    questionCount: 16,
+    questionCount: 17,
   },
 ];

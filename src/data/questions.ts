@@ -3160,4 +3160,33 @@ export const QUESTIONS: Question[] = [
     explanation:
       'Consolidação é o preenchimento do espaço aéreo por líquido, pus, sangue ou células: opacidade mal definida, que pode conter broncograma aéreo e apagar contornos vizinhos (sinal da silhueta). Diferenciais na base: o derrame pleural forma menisco e apaga o seio costofrênico; a atelectasia traz perda de volume. A radiografia em PA e perfil é o exame inicial na suspeita de pneumonia.',
   },
+  {
+    id: 'dsp-17',
+    topicId: 'dispneia',
+    text: 'Paciente com dispneia. Radiografia de tórax em PA. Qual a alteração radiográfica?',
+    options: [
+      { id: 'A', text: 'Pneumotórax bilateral',
+        rationale: 'Correta. Há ar na cavidade pleural dos dois lados: periferia hipertransparente e sem trama vascular, além de uma fina linha pleural visceral paralela à parede torácica. Por ser bilateral, não há desvio do mediastino, o que torna os achados mais sutis.' },
+      { id: 'B', text: 'Derrame pleural bilateral',
+        rationale: 'O derrame aumenta a densidade (opacidade branca) nas bases, com velamento dos seios costofrênicos em menisco. O pneumotórax faz o contrário: a periferia fica mais escura e sem vasos.' },
+      { id: 'C', text: 'Hiperinsuflação pulmonar por DPOC',
+        rationale: 'Na hiperinsuflação, os pulmões ficam hipertransparentes, mas a trama vascular chega até a parede torácica, sem linha pleural. As cúpulas ficam retificadas e o espaço retroesternal aumenta.' },
+      { id: 'D', text: 'Congestão pulmonar com cefalização da trama',
+        rationale: 'A congestão aumenta a trama vascular, com vasos dos ápices mais calibrosos, linhas de Kerley e, em geral, cardiomegalia. Não há periferia sem vasos.' },
+      { id: 'E', text: 'Radiografia de tórax normal',
+        rationale: 'O pneumotórax bilateral pequeno pode passar por radiografia normal justamente por não desviar o mediastino. Por isso, é preciso procurar ativamente a linha pleural e a ausência de trama na periferia dos dois lados.' },
+    ],
+    correctAnswer: 'A',
+    difficulty: 'dificil',
+    tags: ['dispneia', 'pneumotórax', 'pneumotórax bilateral', 'RX de tórax'],
+    source: 'Aula de Imagem — Diagnósticos diferenciais das dispneias',
+    image: {
+      type: 'url',
+      src: '/questoes/dispneia/dsp-17.jpg',
+      caption: 'RX de tórax — pneumotórax bilateral.',
+      showAfterAnswer: false,
+    },
+    explanation:
+      'O pneumotórax é diagnosticado na radiografia pela fina linha radiopaca paralela à parede torácica (pleura visceral), sem silhuetas vasculares além dela. No bilateral, o mediastino fica centrado e a comparação entre os lados não ajuda, então o achado é facilmente perdido. A TC confirma e ajuda a investigar a causa (bolhas, cistos, enfisema).',
+  },
 ];
