@@ -76,6 +76,6 @@ export const TOPICS: Topic[] = [
     description: 'Angio-TC coronariana, escore de cálcio, placas e estenoses, stents e indicações de cateterismo',
     icon: 'HeartPulse',
     color: '#E11D48',
-    questionCount: 22,
+    questionCount: 26,
   },
 ];
