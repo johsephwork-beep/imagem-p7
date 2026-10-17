@@ -70,4 +70,12 @@ export const TOPICS: Topic[] = [
     color: '#F97316',
     questionCount: 21,
   },
+  {
+    id: 'coronaria',
+    title: 'Avaliação Coronariana',
+    description: 'Angio-TC coronariana, escore de cálcio, placas e estenoses, stents e indicações de cateterismo',
+    icon: 'HeartPulse',
+    color: '#E11D48',
+    questionCount: 22,
+  },
 ];
