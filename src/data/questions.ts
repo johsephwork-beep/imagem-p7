@@ -3131,4 +3131,33 @@ export const QUESTIONS: Question[] = [
     explanation:
       'O pneumotórax hipertensivo é diagnóstico clínico: dispneia súbita, hipotensão, turgência jugular, desvio da traqueia e murmúrio abolido. A descompressão é imediata e não deve esperar a radiografia. Quando a imagem é feita, mostra hemitórax hipertransparente e sem trama, desvio do mediastino para o lado oposto, cúpula rebaixada e espaços intercostais alargados.',
   },
+  {
+    id: 'dsp-16',
+    topicId: 'dispneia',
+    text: 'Radiografias de tórax em PA e perfil de paciente com dispneia. Qual achado está indicado pela seta?',
+    options: [
+      { id: 'A', text: 'Derrame pleural livre, com velamento do seio costofrênico em menisco',
+        rationale: 'O derrame forma uma opacidade homogênea, de limite superior curvo (menisco), que apaga o seio costofrênico. Aqui a opacidade é heterogênea, dentro do parênquima, com a cúpula ainda delimitada.' },
+      { id: 'B', text: 'Atelectasia do lobo inferior direito, com perda de volume',
+        rationale: 'A atelectasia reduz o volume do lobo: eleva a cúpula, desloca fissuras e puxa o mediastino para o mesmo lado. Esses sinais de perda de volume não estão presentes.' },
+      { id: 'C', text: 'Elevação da cúpula diafragmática direita',
+        rationale: 'A cúpula direita mantém posição e contorno habituais. O que chama atenção é a opacidade no pulmão logo acima dela.' },
+      { id: 'D', text: 'Massa pulmonar arredondada de contornos bem definidos',
+        rationale: 'Massa teria forma arredondada e limites nítidos. A alteração indicada é uma opacidade mal definida e heterogênea, típica de preenchimento do espaço aéreo.' },
+      { id: 'E', text: 'Consolidação na base direita',
+        rationale: 'Correta. Há aumento de densidade mal definido e heterogêneo no parênquima da base direita, por preenchimento do espaço aéreo, sem sinais de perda de volume nem de derrame.' },
+    ],
+    correctAnswer: 'E',
+    difficulty: 'medio',
+    tags: ['dispneia', 'pneumonia', 'consolidação', 'RX de tórax'],
+    source: 'Aula de Imagem — Diagnósticos diferenciais das dispneias',
+    image: {
+      type: 'url',
+      src: '/questoes/dispneia/dsp-16.jpg',
+      caption: 'PA e perfil — consolidação na base direita.',
+      showAfterAnswer: false,
+    },
+    explanation:
+      'Consolidação é o preenchimento do espaço aéreo por líquido, pus, sangue ou células: opacidade mal definida, que pode conter broncograma aéreo e apagar contornos vizinhos (sinal da silhueta). Diferenciais na base: o derrame pleural forma menisco e apaga o seio costofrênico; a atelectasia traz perda de volume. A radiografia em PA e perfil é o exame inicial na suspeita de pneumonia.',
+  },
 ];
