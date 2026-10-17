@@ -84,6 +84,6 @@ export const TOPICS: Topic[] = [
     description: 'Doença de Chagas (megaesôfago, megacólon, cardiomegalia) e insuficiência cardíaca congestiva — RX, esofagograma, US e TC',
     icon: 'Bug',
     color: '#84CC16',
-    questionCount: 20,
+    questionCount: 23,
   },
 ];
