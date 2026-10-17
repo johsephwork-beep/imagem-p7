@@ -78,4 +78,12 @@ export const TOPICS: Topic[] = [
     color: '#E11D48',
     questionCount: 26,
   },
+  {
+    id: 'chagas_icc',
+    title: 'Chagas & ICC',
+    description: 'Doença de Chagas (megaesôfago, megacólon, cardiomegalia) e insuficiência cardíaca congestiva — RX, esofagograma, US e TC',
+    icon: 'Bug',
+    color: '#84CC16',
+    questionCount: 20,
+  },
 ];
